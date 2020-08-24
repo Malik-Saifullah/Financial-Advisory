@@ -3,11 +3,19 @@
 /*=======================================================
                     Basic Styling
 =======================================================*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -21,8 +29,18 @@ body {
   grid-template-columns: 1fr;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 .my_container {
@@ -157,7 +175,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 300px;
+  width: 70px;
   height: 100vh;
   border-right: 1px solid black;
   border-radius: 0 10px 0 0;
@@ -165,6 +183,15 @@ a {
   -moz-border-radius: 0 10px 0 0;
   -ms-border-radius: 0 10px 0 0;
   -o-border-radius: 0 10px 0 0;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+#aside:hover {
+  width: 300px;
 }
 #aside .date {
   margin: 25px 0 40px 0;
@@ -250,18 +277,31 @@ a {
   height: 30px;
   color: #dadfe9;
   background-color: #414d5a;
-  padding: 3px 8px;
+  padding: 3px 10px;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
 }
 #aside .btn_rotate span {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 500;
   margin-left: 20px;
+}
+
+#aside:hover .btn_rotate i {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
 }
 
 /*=======================================================
@@ -277,6 +317,158 @@ a {
 }
 #main .tabcontent {
   padding: 0px 12px;
+}
+#main .tabcontent .heading_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+#main .tabcontent .heading_container h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+#main .tabcontent .heading_container .video_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+#main .tabcontent .heading_container .video_link a {
+  color: #dadfe9;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-right: 10px;
+}
+#main .tabcontent .heading_container .video_link i {
+  cursor: pointer;
+  font-size: 16px;
+  color: #dadfe9;
+}
+#main .tabcontent .table_container {
+  padding-left: 20px;
+}
+#main .tabcontent .table_container .table_heading {
+  color: #dadfe9;
+  background-color: #2f3944;
+  padding: 10px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+#main .tabcontent .table_container table {
+  width: 100%;
+}
+#main .tabcontent .table_container table tbody tr {
+  border-bottom: 2px solid #515e7a;
+}
+#main .tabcontent .table_container table tbody tr td {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #dadfe9;
+  background-color: #414d5a;
+}
+#main .tabcontent .table_container table tbody tr td a {
+  float: right;
+  color: #dadfe9;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+#main .tabcontent .table_container button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  color: #dadfe9;
+  float: right;
+  font-size: 14px;
+  line-height: 1.3;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: transparent;
+  border: none;
+}
+#main .tabcontent .table_container button i {
+  margin-right: 15px;
+}
+#main #Transaction .heading_container .transaction_btn_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#main #Transaction .heading_container .transaction_btn_box .btn_box_inner {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.3;
+  cursor: pointer;
+  color: #dadfe9;
+}
+#main #Transaction .heading_container .transaction_btn_box .add-income, #main #Transaction .heading_container .transaction_btn_box .add-expense, #main #Transaction .heading_container .transaction_btn_box .more {
+  background-color: #414d5a;
+}
+#main #Transaction .table_container .table_container_btn_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: #414d5a;
+  padding: 10px 20px;
+}
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box:nth-child(1) {
+  margin-right: 80px;
+}
+#main #Transaction .table_container table thead tr td {
+  padding: 10px 20px;
+  background-color: #2f3944;
+}
+#main #Transaction .table_container table tbody {
+  overflow-y: scroll;
+  height: 300px;
 }
 
 /*=======================================================
