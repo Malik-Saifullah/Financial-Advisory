@@ -19,7 +19,7 @@ document.getElementById("defaultOpen").click();
 
 
 /* user profile toggle btn */
-$("#menu-toggle").click(function(e) {
+$("#menu-toggle").click(function (e) {
     e.preventDefault();
     $("#user_profile").toggleClass("toggled");
     $("#three_column").toggleClass("main-wrapper");
@@ -47,3 +47,7 @@ for (i = 0; i < dropdown.length; i++) {
 
 
 
+$('#myTab a').on('click', function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+});
