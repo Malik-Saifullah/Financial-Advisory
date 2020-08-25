@@ -159,7 +159,7 @@ img {
 #aside {
     display: flex;
     flex-direction: column;
-    width: 70px;
+    min-width: 70px;
     height: 100vh;
     border-right: 1px solid black;
     border-radius: 0 10px 0 0;
