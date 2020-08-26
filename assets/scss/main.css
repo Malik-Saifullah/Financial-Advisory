@@ -96,7 +96,8 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #3a4551;
-  border-bottom: 1px solid #000;
+  -webkit-box-shadow: 0px 1px 5px 0px #272727;
+  box-shadow: 0px 1px 5px 0px #272727;
 }
 #header .my_container .top-menu {
   display: -webkit-box;
@@ -173,11 +174,10 @@ img {
           flex-direction: column;
   min-width: 70px;
   width: 70px;
+  height: 100vh;
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
-  height: 100vh;
-  border-right: 1px solid black;
   border-radius: 0 10px 0 0;
   -webkit-border-radius: 0 10px 0 0;
   -moz-border-radius: 0 10px 0 0;
@@ -194,7 +194,7 @@ img {
   min-width: 275px;
 }
 #aside .date {
-  margin: 25px 0 40px 0;
+  margin: 25px 0 20px 0;
   background-color: #303a45;
 }
 #aside .date p {
@@ -211,6 +211,13 @@ img {
 }
 #aside nav.navbar ul.navbar-nav {
   width: 100%;
+}
+#aside nav.navbar ul.navbar-nav li.nav-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#aside nav.navbar ul.navbar-nav li.nav-item a:hover {
+  background-color: #414d5a;
 }
 #aside nav.navbar ul.navbar-nav li.nav-item a.nav-link {
   color: #dadfe9;
@@ -246,6 +253,8 @@ img {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 20px 10px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #aside nav.navbar ul.navbar-nav li.nav-item div.dropdown-container a img {
   width: 28px;
@@ -297,11 +306,11 @@ img {
 }
 
 #aside:hover .btn_rotate i {
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
 }
 
 /*=======================================================
@@ -314,6 +323,8 @@ img {
   background-color: #515e7a;
   float: left;
   padding-top: 70px;
+  -webkit-box-shadow: 0px 0px 15px 0px #272727;
+  box-shadow: 0px 0px 15px 0px #272727;
 }
 #main .tabcontent {
   padding: 0px 12px;
@@ -778,8 +789,10 @@ img {
 
 #user_profile {
   float: right;
-  width: 320px;
-  border-left: 1px solid #000;
+  min-width: 320px;
+  background-color: gray;
+  -webkit-box-shadow: 0px 0px 15px 0px #272727;
+  box-shadow: 0px 0px 15px 0px #272727;
 }
 #user_profile .img_container {
   position: relative;
@@ -790,6 +803,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 0;
+  background-color: #414d5a;
 }
 #user_profile .img_container img {
   margin: 0 auto;
@@ -812,7 +826,6 @@ img {
 }
 #user_profile .user-info-container {
   padding: 10px 20px;
-  background-color: gray;
 }
 #user_profile .user-info-container .user-info {
   padding: 20px 0;

@@ -87,7 +87,9 @@ img {
     align-items: center;
     flex-wrap: wrap;
     background-color: $headerColor;
-    border-bottom: 1px solid #000;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(39,39,39,1);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(39,39,39,1);
+    box-shadow: 0px 1px 5px 0px rgba(39,39,39,1);
 
     .my_container {
         .top-menu {
@@ -157,9 +159,8 @@ img {
     flex-direction: column;
     min-width: 70px;
     width: 70px;
-    min-height: max-content;
     height: 100vh;
-    border-right: 1px solid black;
+    min-height: max-content;
     border-radius: 0 10px 0 0;
     -webkit-border-radius: 0 10px 0 0;
     -moz-border-radius: 0 10px 0 0;
@@ -177,7 +178,7 @@ img {
     }
 
     .date {
-        margin: 25px 0 40px 0;
+        margin: 25px 0 20px 0;
         background-color: $dateColor;
 
         p {
@@ -198,6 +199,11 @@ img {
             width: 100%;
 
             li.nav-item {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                a:hover{
+                    background-color: $bodyColor1;
+                }
                 a.nav-link {
                     color: $textColor;
                     display: flex;
@@ -228,6 +234,8 @@ img {
                         display: flex;
                         align-items: center;
                         padding: 10px 20px 10px 0;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
 
                         img {
                             width: 28px;
@@ -285,11 +293,11 @@ img {
 }
 
 #aside:hover .btn_rotate i {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
 }
 
 
@@ -303,6 +311,9 @@ img {
     background-color: $mainColor;
     float: left;
     padding-top: 70px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
+    box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
 
     .tabcontent {
         padding: 0px 12px;
@@ -845,15 +856,19 @@ img {
     // position: absolute;
     // right: 0;
     float: right;
-    width: 320px;
+    min-width: 320px;
     // height: 100vh;
-    border-left: 1px solid #000;
+    background-color: gray;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
+    box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
 
     .img_container {
         position: relative;
         display: flex;
         justify-content: center;
         padding: 20px 0;
+        background-color: $bodyColor1;
 
         img {
             margin: 0 auto;
@@ -879,7 +894,6 @@ img {
 
     .user-info-container {
         padding: 10px 20px;
-        background-color: gray;
 
         .user-info {
             padding: 20px 0;
