@@ -348,6 +348,7 @@ img {
 
         .table_container {
             padding-left: 20px;
+            // min-height: 400px;
 
             .table_heading {
                 color: $textColor;
@@ -359,27 +360,61 @@ img {
                 line-height: 1.3;
             }
 
-            table {
-                width: 100%;
-
-                tbody {
-                    tr {
-                        border-bottom: 2px solid $mainColor;
-
-                        td {
-                            padding: 20px;
-                            font-size: 14px;
-                            font-weight: 500;
-                            line-height: 1.3;
-                            color: $textColor;
-                            background-color: $bodyColor1;
-
-                            a {
-                                float: right;
-                                color: $textColor;
+            .table_height_container{
+                padding-right: 5px;
+                /* width */
+                &::-webkit-scrollbar {
+                    width: 10px;
+                }
+                
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                    box-shadow: inset 0 0 5px grey;
+                    border-radius: 30px;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -ms-border-radius: 30px;
+                    -o-border-radius: 30px;
+                }
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #888;
+                    border-radius: 30px;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -ms-border-radius: 30px;
+                    -o-border-radius: 30px;
+                }
+                
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+                table {
+                    width: 100%;
+                    // overflow-y: scroll;
+    
+                    tbody {
+                        tr {
+                            border-bottom: 2px solid $mainColor;
+    
+                            td {
+                                padding: 20px;
                                 font-size: 14px;
                                 font-weight: 500;
                                 line-height: 1.3;
+                                color: $textColor;
+                                background-color: $bodyColor1;
+    
+                                a {
+                                    float: right;
+                                    color: $textColor;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 1.3;
+                                }
                             }
                         }
                     }
