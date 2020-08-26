@@ -86,10 +86,10 @@ img {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    background-color: $headerColor;
-    -webkit-box-shadow: 0px 1px 5px 0px rgba(39,39,39,1);
-    -moz-box-shadow: 0px 1px 5px 0px rgba(39,39,39,1);
-    box-shadow: 0px 1px 5px 0px rgba(39,39,39,1);
+    background: $headerColor;
+    // -webkit-box-shadow: 0px 1px 5px 0px rgba(39,39,39,1);
+    // -moz-box-shadow: 0px 1px 5px 0px rgba(39,39,39,1);
+    // box-shadow: 0px 1px 5px 0px rgba(39,39,39,1);
 
     .my_container {
         .top-menu {
@@ -115,6 +115,7 @@ img {
                     min-width: 250px;
                     border: 0;
                     padding: 5px 20px;
+                    background-color:#e6ebf5;
                 }
 
                 img {
@@ -172,6 +173,7 @@ img {
     -moz-transition: .3s ease-in-out;
     -ms-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
+    background: linear-gradient(45deg, #2f3944, #414d5a);;
 
     &:hover {
         min-width: 275px;
@@ -311,9 +313,9 @@ img {
     background-color: $mainColor;
     float: left;
     padding-top: 70px;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
-    box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
+    // -webkit-box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
+    // -moz-box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
+    // box-shadow: 0px 0px 15px 0px rgba(39,39,39,1);
 
     .tabcontent {
         padding: 0px 12px;

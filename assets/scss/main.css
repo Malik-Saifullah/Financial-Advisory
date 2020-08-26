@@ -95,9 +95,8 @@ img {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #3a4551;
-  -webkit-box-shadow: 0px 1px 5px 0px #272727;
-  box-shadow: 0px 1px 5px 0px #272727;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to top, #2f3944, #414d5a);
 }
 #header .my_container .top-menu {
   display: -webkit-box;
@@ -128,6 +127,7 @@ img {
   min-width: 250px;
   border: 0;
   padding: 5px 20px;
+  background-color: #e6ebf5;
 }
 #header .my_container .top-menu .input_group img {
   cursor: pointer;
@@ -189,6 +189,7 @@ img {
   -moz-transition: .3s ease-in-out;
   -ms-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
+  background: linear-gradient(45deg, #2f3944, #414d5a);
 }
 #aside:hover {
   min-width: 275px;
@@ -323,8 +324,6 @@ img {
   background-color: #515e7a;
   float: left;
   padding-top: 70px;
-  -webkit-box-shadow: 0px 0px 15px 0px #272727;
-  box-shadow: 0px 0px 15px 0px #272727;
 }
 #main .tabcontent {
   padding: 0px 12px;
