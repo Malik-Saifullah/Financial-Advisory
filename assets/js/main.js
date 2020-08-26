@@ -1,3 +1,6 @@
+/*=======================================================
+        show and hide tab content of aside(sidebar)
+=======================================================*/
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -18,7 +21,9 @@ document.getElementById("defaultOpen").click();
 
 
 
-/* user profile toggle btn */
+/*=======================================================
+    show and hide user profile on header profile image
+=======================================================*/
 $("#menu-toggle").click(function (e) {
     e.preventDefault();
     $("#user_profile").toggleClass("toggled");
@@ -28,7 +33,9 @@ $("#menu-toggle").click(function (e) {
 
 
 
-
+/*=======================================================
+        aside(sidebar) dropdown hide and show
+=======================================================*/
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
@@ -43,11 +50,3 @@ for (i = 0; i < dropdown.length; i++) {
         }
     });
 }
-
-
-
-
-$('#myTab a').on('click', function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-});
