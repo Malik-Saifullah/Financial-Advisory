@@ -173,10 +173,10 @@ img {
           flex-direction: column;
   min-width: 70px;
   width: 70px;
-  height: 100vh;
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
+  height: 100vh;
   border-right: 1px solid black;
   border-radius: 0 10px 0 0;
   -webkit-border-radius: 0 10px 0 0;
@@ -661,6 +661,89 @@ img {
 }
 #main #Charts .tab-content {
   margin-top: 20px;
+}
+#main #Charts .tab-content #home .table_container {
+  padding-left: 0;
+}
+#main #Charts .tab-content #home .table_container .table_heading i {
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 40px;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tab {
+  min-width: 275px;
+  margin-right: 15px;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tab .nav-link {
+  background-color: #414d5a;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #dadfe9;
+  padding: 10px;
+  margin-bottom: 3px;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tab .nav-link i {
+  float: right;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tab .sub_contant_box {
+  background-color: #414d5a;
+  color: #dadfe9;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tab .sub_contant_box p,
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tab .sub_contant_box span {
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 500;
+  margin: 0;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tabContent {
+  margin: 0;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tabContent .tab-pane h4 {
+  color: #dadfe9;
+  background-color: #414d5a;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tabContent .tab-pane .desc_box {
+  background-color: #414d5a;
+  padding: 10px 20px;
+}
+#main #Charts .tab-content #home .table_container .home_tab_container #v-pills-tabContent .tab-pane .desc_box p {
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+#main #Charts .tab-content #home .table_container button {
+  float: left;
+  margin: -20px 0 0 35px;
+}
+#main #Charts .tab-content #home .table_container h4.heading_bottom {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 25px 0;
 }
 #main #Charts .tab-content #menu2 .table_container {
   padding-left: 0;

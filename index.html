@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/scss/main.css">
 </head>
@@ -405,9 +405,102 @@
                         </ul>
                         <div class="tab-content">
                             <div id="home" class="tab-pane fade-in active">
-                                <h3>Assets</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="table_container">
+                                    <p class="table_heading">Income <i class="far fa-question-circle"></i></p>
+                                    <div class="home_tab_container">
+                                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                            aria-orientation="vertical">
+                                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                                href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                                aria-selected="true">
+                                                Cash at Bank
+                                                <i class="fas fa-chevron-right"></i>
+                                            </a>
+                                            <div class="sub_contant_box">
+                                                <p>Last Transaction Date: </p>
+                                                <span>13 Februry 2020</span>
+                                            </div>
+                                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                                href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                                aria-selected="false">
+                                                Cash on Hand
+                                                <i class="fas fa-chevron-right"></i>
+                                            </a>
+                                            <div class="sub_contant_box">
+                                                <p>Last Transaction Date: </p>
+                                                <span>13 Februry 2020</span>
+                                            </div>
+                                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                                href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                                aria-selected="false">
+                                                Petty Cash
+                                                <i class="fas fa-chevron-right"></i>
+                                            </a>
+                                            <div class="sub_contant_box">
+                                                <p>Last Transaction Date: </p>
+                                                <span>13 Februry 2020</span>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content" id="v-pills-tabContent">
+                                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                                aria-labelledby="v-pills-home-tab">
+                                                <h4>Current Asset</h4>
+                                                <div class="desc_box">
+                                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                                                        repellendus molestiae nostrum non modi. Ex quas aliquam vitae,
+                                                        labore qui aperiam hic, laborum quisquam placeat magnam velit
+                                                        accusamus minima quae. Lorem ipsum dolor, sit amet consectetur
+                                                        adipisicing elit. Quae veritatis culpa voluptas molestias rerum
+                                                        aperiam ducimus quas ad quod, delectus, fuga corrupti nostrum
+                                                        mollitia labore, illo tempora nulla aliquam sit?</p>
+                                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                                                        repellendus molestiae nostrum non modi. Ex quas aliquam vitae,
+                                                        labore qui aperiam hic, laborum quisquam placeat magnam velit
+                                                        accusamus minima quae.</p>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                                aria-labelledby="v-pills-profile-tab">
+                                                <h4>Cash on Hand</h4>
+                                                <div class="desc_box">
+                                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                                                        repellendus molestiae nostrum non modi. Ex quas aliquam vitae,
+                                                        labore qui aperiam hic, laborum quisquam placeat magnam velit
+                                                        accusamus minima quae. Lorem ipsum dolor, sit amet consectetur
+                                                        adipisicing elit. Quae veritatis culpa voluptas molestias rerum
+                                                        aperiam ducimus quas ad quod, delectus, fuga corrupti nostrum
+                                                        mollitia labore, illo tempora nulla aliquam sit?</p>
+                                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                                                        repellendus molestiae nostrum non modi. Ex quas aliquam vitae,
+                                                        labore qui aperiam hic, laborum quisquam placeat magnam velit
+                                                        accusamus minima quae.</p>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                                aria-labelledby="v-pills-messages-tab">
+                                                <h4>Petty Cash</h4>
+                                                <div class="desc_box">
+                                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                                                        repellendus molestiae nostrum non modi. Ex quas aliquam vitae,
+                                                        labore qui aperiam hic, laborum quisquam placeat magnam velit
+                                                        accusamus minima quae. Lorem ipsum dolor, sit amet consectetur
+                                                        adipisicing elit. Quae veritatis culpa voluptas molestias rerum
+                                                        aperiam ducimus quas ad quod, delectus, fuga corrupti nostrum
+                                                        mollitia labore, illo tempora nulla aliquam sit?</p>
+                                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                                                        repellendus molestiae nostrum non modi. Ex quas aliquam vitae,
+                                                        labore qui aperiam hic, laborum quisquam placeat magnam velit
+                                                        accusamus minima quae.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button>
+                                        <i class="fas fa-plus-circle"></i>
+                                        Add a new account
+                                    </button>
+                                    <h4 class="heading_bottom">Money in Transit</h4>
+                                </div>
                             </div>
                             <div id="menu1" class="tab-pane fade">
                                 <h3>Liabilities & Credit Cards</h3>
@@ -426,7 +519,8 @@
                                                         <h4>Consultin Income</h4>
                                                         <p>Last transaction December 9, 2019</p>
                                                     </td>
-                                                    <td>Money your business recive by providing consulting services to your
+                                                    <td>Money your business recive by providing consulting services to
+                                                        your
                                                         customers.</td>
                                                     <td>
                                                         <a href="#">
