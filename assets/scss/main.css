@@ -177,6 +177,7 @@ img {
   min-width: 70px;
   width: 70px;
   height: 100vh;
+  overflow-x: hidden;
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
@@ -185,13 +186,40 @@ img {
   -moz-border-radius: 0 10px 0 0;
   -ms-border-radius: 0 10px 0 0;
   -o-border-radius: 0 10px 0 0;
-  overflow: hidden;
   transition: .3s ease-in-out;
   -webkit-transition: .3s ease-in-out;
   -moz-transition: .3s ease-in-out;
   -ms-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
   background: linear-gradient(45deg, #2f3944, #414d5a);
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+#aside::-webkit-scrollbar {
+  width: 10px;
+}
+#aside::-webkit-scrollbar-track {
+  background: #657699;
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#aside::-webkit-scrollbar-thumb {
+  background: #a2b5d6;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#aside::-webkit-scrollbar-thumb:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to top, #2f3944, #414d5a);
 }
 #aside:hover {
   min-width: 275px;
@@ -698,6 +726,7 @@ img {
 #main #Charts .tab-content {
   margin-top: 20px;
   /* content of assets tab */
+  /* content of liabilities & credit card tab */
   /* content of income tab */
 }
 #main #Charts .tab-content #home .table_container {
@@ -782,6 +811,130 @@ img {
   line-height: 1.3;
   font-weight: 700;
   margin: 25px 0;
+}
+#main #Charts .tab-content #menu1 .table_height_container .credit-card .table_container,
+#main #Charts .tab-content #menu1 .table_height_container .loan-line-of-credit .table_container,
+#main #Charts .tab-content #menu1 .table_height_container .expected-payments-to-vendor .table_container,
+#main #Charts .tab-content #menu1 .table_height_container .sales-tax .table_container,
+#main #Charts .tab-content #menu1 .table_height_container .due-for-patroll .table_container,
+#main #Charts .tab-content #menu1 .table_height_container .due-to-you-and-other-business-owner .table_container,
+#main #Charts .tab-content #menu1 .table_height_container .customer-prepayment-and-customer-credit .table_container {
+  padding-left: 0;
+}
+#main #Charts .tab-content #menu1 .table_height_container .credit-card .table_container .table_heading i,
+#main #Charts .tab-content #menu1 .table_height_container .loan-line-of-credit .table_container .table_heading i,
+#main #Charts .tab-content #menu1 .table_height_container .expected-payments-to-vendor .table_container .table_heading i,
+#main #Charts .tab-content #menu1 .table_height_container .sales-tax .table_container .table_heading i,
+#main #Charts .tab-content #menu1 .table_height_container .due-for-patroll .table_container .table_heading i,
+#main #Charts .tab-content #menu1 .table_height_container .due-to-you-and-other-business-owner .table_container .table_heading i,
+#main #Charts .tab-content #menu1 .table_height_container .customer-prepayment-and-customer-credit .table_container .table_heading i {
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+#main #Charts .tab-content #menu1 .table_height_container .credit-card .table_container table,
+#main #Charts .tab-content #menu1 .table_height_container .loan-line-of-credit .table_container table,
+#main #Charts .tab-content #menu1 .table_height_container .expected-payments-to-vendor .table_container table,
+#main #Charts .tab-content #menu1 .table_height_container .sales-tax .table_container table,
+#main #Charts .tab-content #menu1 .table_height_container .due-for-patroll .table_container table,
+#main #Charts .tab-content #menu1 .table_height_container .due-to-you-and-other-business-owner .table_container table,
+#main #Charts .tab-content #menu1 .table_height_container .customer-prepayment-and-customer-credit .table_container table {
+  margin-bottom: 20px;
+}
+#main #Charts .tab-content #menu1 .table_height_container .credit-card .table_container table tbody tr td,
+#main #Charts .tab-content #menu1 .table_height_container .loan-line-of-credit .table_container table tbody tr td,
+#main #Charts .tab-content #menu1 .table_height_container .expected-payments-to-vendor .table_container table tbody tr td,
+#main #Charts .tab-content #menu1 .table_height_container .sales-tax .table_container table tbody tr td,
+#main #Charts .tab-content #menu1 .table_height_container .due-for-patroll .table_container table tbody tr td,
+#main #Charts .tab-content #menu1 .table_height_container .due-to-you-and-other-business-owner .table_container table tbody tr td,
+#main #Charts .tab-content #menu1 .table_height_container .customer-prepayment-and-customer-credit .table_container table tbody tr td {
+  font-weight: 500;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#main #Charts .tab-content #menu1 .table_height_container .credit-card .table_container table tbody tr td h4,
+#main #Charts .tab-content #menu1 .table_height_container .loan-line-of-credit .table_container table tbody tr td h4,
+#main #Charts .tab-content #menu1 .table_height_container .expected-payments-to-vendor .table_container table tbody tr td h4,
+#main #Charts .tab-content #menu1 .table_height_container .sales-tax .table_container table tbody tr td h4,
+#main #Charts .tab-content #menu1 .table_height_container .due-for-patroll .table_container table tbody tr td h4,
+#main #Charts .tab-content #menu1 .table_height_container .due-to-you-and-other-business-owner .table_container table tbody tr td h4,
+#main #Charts .tab-content #menu1 .table_height_container .customer-prepayment-and-customer-credit .table_container table tbody tr td h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+#main #Charts .tab-content #menu1 .table_height_container .credit-card .table_container table tbody tr td h5,
+#main #Charts .tab-content #menu1 .table_height_container .loan-line-of-credit .table_container table tbody tr td h5,
+#main #Charts .tab-content #menu1 .table_height_container .expected-payments-to-vendor .table_container table tbody tr td h5,
+#main #Charts .tab-content #menu1 .table_height_container .sales-tax .table_container table tbody tr td h5,
+#main #Charts .tab-content #menu1 .table_height_container .due-for-patroll .table_container table tbody tr td h5,
+#main #Charts .tab-content #menu1 .table_height_container .due-to-you-and-other-business-owner .table_container table tbody tr td h5,
+#main #Charts .tab-content #menu1 .table_height_container .customer-prepayment-and-customer-credit .table_container table tbody tr td h5 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+#main #Charts .tab-content #menu1 .table_height_container .credit-card .table_container table tbody tr td p,
+#main #Charts .tab-content #menu1 .table_height_container .loan-line-of-credit .table_container table tbody tr td p,
+#main #Charts .tab-content #menu1 .table_height_container .expected-payments-to-vendor .table_container table tbody tr td p,
+#main #Charts .tab-content #menu1 .table_height_container .sales-tax .table_container table tbody tr td p,
+#main #Charts .tab-content #menu1 .table_height_container .due-for-patroll .table_container table tbody tr td p,
+#main #Charts .tab-content #menu1 .table_height_container .due-to-you-and-other-business-owner .table_container table tbody tr td p,
+#main #Charts .tab-content #menu1 .table_height_container .customer-prepayment-and-customer-credit .table_container table tbody tr td p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
+}
+#main #Charts .tab-content #menu1 .table_height_container .credit-card .table_container table tbody tr td button,
+#main #Charts .tab-content #menu1 .table_height_container .loan-line-of-credit .table_container table tbody tr td button,
+#main #Charts .tab-content #menu1 .table_height_container .expected-payments-to-vendor .table_container table tbody tr td button,
+#main #Charts .tab-content #menu1 .table_height_container .sales-tax .table_container table tbody tr td button,
+#main #Charts .tab-content #menu1 .table_height_container .due-for-patroll .table_container table tbody tr td button,
+#main #Charts .tab-content #menu1 .table_height_container .due-to-you-and-other-business-owner .table_container table tbody tr td button,
+#main #Charts .tab-content #menu1 .table_height_container .customer-prepayment-and-customer-credit .table_container table tbody tr td button {
+  margin: 0;
+}
+#main #Charts .tab-content #menu1 .table_height_container .short-term-liabilities .table_container,
+#main #Charts .tab-content #menu1 .table_height_container .long-term-liabilities .table_container {
+  padding-left: 0;
+}
+#main #Charts .tab-content #menu1 .table_height_container .short-term-liabilities .table_container .table_heading i,
+#main #Charts .tab-content #menu1 .table_height_container .long-term-liabilities .table_container .table_heading i {
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+#main #Charts .tab-content #menu1 .table_height_container .short-term-liabilities .table_container table,
+#main #Charts .tab-content #menu1 .table_height_container .long-term-liabilities .table_container table {
+  margin-bottom: 20px;
+}
+#main #Charts .tab-content #menu1 .table_height_container .short-term-liabilities .table_container table tbody tr td,
+#main #Charts .tab-content #menu1 .table_height_container .long-term-liabilities .table_container table tbody tr td {
+  font-weight: 500;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#main #Charts .tab-content #menu1 .table_height_container .short-term-liabilities .table_container table tbody tr td h4,
+#main #Charts .tab-content #menu1 .table_height_container .long-term-liabilities .table_container table tbody tr td h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+#main #Charts .tab-content #menu1 .table_height_container .short-term-liabilities .table_container table tbody tr td h5,
+#main #Charts .tab-content #menu1 .table_height_container .long-term-liabilities .table_container table tbody tr td h5 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+#main #Charts .tab-content #menu1 .table_height_container .short-term-liabilities .table_container table tbody tr td p,
+#main #Charts .tab-content #menu1 .table_height_container .long-term-liabilities .table_container table tbody tr td p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
 }
 #main #Charts .tab-content #menu2 .table_container {
   padding-left: 0;
