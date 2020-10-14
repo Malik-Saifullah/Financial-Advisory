@@ -14,6 +14,103 @@
 
 html {
   scroll-behavior: smooth;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-moz-scrollbar {
+  width: 10px;
+}
+html::-ms-scrollbar {
+  width: 10px;
+}
+html::-o-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: #657699;
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+html::-moz-scrollbar-track {
+  background: #657699;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+html::-ms-scrollbar-track {
+  background: #657699;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+html::-o-scrollbar-track {
+  background: #657699;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+html::-webkit-scrollbar-thumb {
+  background: #a2b5d6;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+html::-moz-scrollbar-thumb {
+  background: #a2b5d6;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+html::-ms-scrollbar-thumb {
+  background: #a2b5d6;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+html::-o-scrollbar-thumb {
+  background: #a2b5d6;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to top, #2f3944, #414d5a);
+}
+html::-moz-scrollbar-thumb:hover {
+  background: linear-gradient(to top, #2f3944, #414d5a);
+}
+html::-ms-scrollbar-thumb:hover {
+  background: linear-gradient(to top, #2f3944, #414d5a);
+}
+html::-o-scrollbar-thumb:hover {
+  background: linear-gradient(to top, #2f3944, #414d5a);
 }
 
 body {
@@ -27,6 +124,7 @@ body {
 ul {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 a {
@@ -86,6 +184,10 @@ img {
                     Header Section
 =======================================================*/
 #header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   min-height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,6 +269,10 @@ img {
 }
 
 #aside {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  top: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,10 +283,11 @@ img {
   min-width: 70px;
   width: 70px;
   height: 100vh;
-  overflow-x: hidden;
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
+  max-height: 100%;
+  overflow-x: hidden;
   border-radius: 0 10px 0 0;
   -webkit-border-radius: 0 10px 0 0;
   -moz-border-radius: 0 10px 0 0;
@@ -199,10 +306,46 @@ img {
 #aside::-webkit-scrollbar {
   width: 10px;
 }
+#aside::-moz-scrollbar {
+  width: 10px;
+}
+#aside::-ms-scrollbar {
+  width: 10px;
+}
+#aside::-o-scrollbar {
+  width: 10px;
+}
 #aside::-webkit-scrollbar-track {
   background: #657699;
   -webkit-box-shadow: inset 0 0 5px grey;
           box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#aside::-moz-scrollbar-track {
+  background: #657699;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#aside::-ms-scrollbar-track {
+  background: #657699;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#aside::-o-scrollbar-track {
+  background: #657699;
+  box-shadow: inset 0 0 5px grey;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -217,8 +360,41 @@ img {
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
 }
+#aside::-moz-scrollbar-thumb {
+  background: #a2b5d6;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#aside::-ms-scrollbar-thumb {
+  background: #a2b5d6;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#aside::-o-scrollbar-thumb {
+  background: #a2b5d6;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
 #aside::-webkit-scrollbar-thumb:hover {
   background: -webkit-gradient(linear, left bottom, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to top, #2f3944, #414d5a);
+}
+#aside::-moz-scrollbar-thumb:hover {
+  background: linear-gradient(to top, #2f3944, #414d5a);
+}
+#aside::-ms-scrollbar-thumb:hover {
+  background: linear-gradient(to top, #2f3944, #414d5a);
+}
+#aside::-o-scrollbar-thumb:hover {
   background: linear-gradient(to top, #2f3944, #414d5a);
 }
 #aside:hover {
@@ -262,6 +438,7 @@ img {
   padding: 10px 20px 10px 0;
 }
 #aside nav.navbar ul.navbar-nav li.nav-item a.nav-link img {
+  min-width: 30px;
   width: 30px;
   margin: 0 20px;
 }
@@ -342,6 +519,84 @@ img {
 }
 
 /*=======================================================
+                all-transaction page
+=======================================================*/
+.all-transactions .all-transaction-title {
+  color: #dadfe9;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.all-transactions .all-transaction-subtitle {
+  color: #dadfe9;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 30px;
+  opacity: .7;
+}
+.all-transactions .all-transaction-card-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.all-transactions .all-transaction-card-box .card {
+  width: 300px;
+  padding: 30px;
+  margin: 10px;
+  border: 1px solid #303a45;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  background-color: transparent;
+  text-decoration: none;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+.all-transactions .all-transaction-card-box .card:hover {
+  -webkit-box-shadow: 0 8px 32px #303a45;
+          box-shadow: 0 8px 32px #303a45;
+  border-color: transparent;
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
+}
+.all-transactions .all-transaction-card-box .card svg {
+  width: 100px;
+  margin: 0 auto;
+}
+.all-transactions .all-transaction-card-box .card .icon-title {
+  color: #dadfe9;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.all-transactions .all-transaction-card-box .card .icon-info {
+  color: #dadfe9;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  text-align: center;
+}
+
+/*=======================================================
                     Main Section
 =======================================================*/
 #main {
@@ -350,7 +605,7 @@ img {
   margin-right: auto;
   background-color: #515e7a;
   float: left;
-  padding-top: 70px;
+  padding-top: 140px;
   /* genaric styling for tabcontent */
   /* transaction tab */
   /* chart tab */
@@ -487,6 +742,280 @@ img {
 }
 #main .tabcontent .table_container button i {
   margin-right: 15px;
+}
+#main #Transaction {
+  /* bank-statement */
+}
+#main #Transaction #bank-statement .upload-statement-title {
+  color: #dadfe9;
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+#main #Transaction #bank-statement .download-statement {
+  margin-bottom: 30px;
+}
+#main #Transaction #bank-statement .download-statement .bank-statement-title {
+  color: #dadfe9;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+#main #Transaction #bank-statement .download-statement .electronic-statement-info-box {
+  border: 1px solid #303a45;
+  padding: 20px 20px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#main #Transaction #bank-statement .download-statement .electronic-statement-info-box .desc {
+  color: #dadfe9;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+#main #Transaction #bank-statement .download-statement .electronic-statement-info-box .suported-files {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#main #Transaction #bank-statement .download-statement .electronic-statement-info-box .suported-files .list-item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #dadfe9;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 300;
+  margin: 0px 30px 10px 0;
+}
+#main #Transaction #bank-statement .download-statement .electronic-statement-info-box .suported-files .list-item .formate {
+  padding: 3px 13px 4px 15px;
+  margin-right: 5px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to top, #2f3944, #414d5a);
+  border-radius: 30px 0 0 30px;
+  -webkit-border-radius: 30px 0 0 30px;
+  -moz-border-radius: 30px 0 0 30px;
+  -ms-border-radius: 30px 0 0 30px;
+  -o-border-radius: 30px 0 0 30px;
+}
+#main #Transaction #bank-statement .upload-statement {
+  margin-bottom: 30px;
+}
+#main #Transaction #bank-statement .upload-statement .bank-statement-title {
+  color: #dadfe9;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box {
+  border: 1px solid #303a45;
+  padding: 20px 20px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box .desc {
+  color: #dadfe9;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_statement_container .control-label {
+  color: #dadfe9;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  opacity: .7;
+  margin-bottom: 0;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_statement_container .control-label::after {
+  content: "*";
+  color: #d00;
+  font-size: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  margin-right: -8px;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_account_container {
+  margin-top: 15px;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_account_container .control-label {
+  color: #dadfe9;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  opacity: .7;
+  margin-bottom: 0;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_account_container .control-label::after {
+  content: "*";
+  color: #d00;
+  font-size: 10px;
+  font-weight: bold;
+  vertical-align: top;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_account_container .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_account_container .controls select {
+  width: 200px;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_account_container .controls a {
+  color: #dadfe9;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_account_container .controls a svg {
+  width: 20px;
+  color: #dadfe9;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form #id_account_container .help-block {
+  display: block;
+  color: #dadfe9;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .form-actions div button {
+  color: #dadfe9;
+  background: -webkit-gradient(linear, right top, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to left, #2f3944, #414d5a);
+  padding: 10px 25px;
+  border: 1px solid #303a45;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .form-actions div button:hover {
+  color: #dadfe9;
+  background: transparent;
+  -webkit-box-shadow: 0 8px 32px #303a45;
+          box-shadow: 0 8px 32px #303a45;
+  border-color: transparent;
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .wv-divider {
+  width: 100%;
+  height: 1px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to top, #2f3944, #414d5a);
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .instruction-list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .instruction-list p {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 300;
+  margin-left: -20px;
+  margin-bottom: 10px;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .instruction-list p strong {
+  font-weight: 700;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .instruction-list li {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .help-artical-link {
+  font-weight: 300;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .help-artical-link strong {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+#main #Transaction #bank-statement .upload-statement .electronic-statement-info-box form .help-artical-link strong a {
+  color: #303a45;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+#main #Transaction #bank-statement .manage-statement {
+  margin-bottom: 30px;
+}
+#main #Transaction #bank-statement .manage-statement .bank-statement-title {
+  color: #dadfe9;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+#main #Transaction #bank-statement .manage-statement .electronic-statement-info-box {
+  border: 1px solid #303a45;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#main #Transaction #bank-statement .manage-statement .electronic-statement-info-box .desc {
+  color: #dadfe9;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  margin: 0;
+}
+#main #Transaction #bank-statement .manage-statement .electronic-statement-info-box .desc a {
+  color: #303a45;
+  margin-left: 5px;
+  font-weight: 600;
+  background-image: url("../images/Icons/external-link.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 11px 11px;
+  padding-right: 15px;
+  display: inline-block;
 }
 #main #Transaction .heading_container .transaction_btn_box {
   display: -webkit-box;
