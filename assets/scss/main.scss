@@ -18,15 +18,19 @@
 
 html {
     scroll-behavior: smooth;
+
     &::-webkit-scrollbar {
         width: 10px;
     }
+
     &::-moz-scrollbar {
         width: 10px;
     }
+
     &::-ms-scrollbar {
         width: 10px;
     }
+
     &::-o-scrollbar {
         width: 10px;
     }
@@ -41,6 +45,7 @@ html {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-moz-scrollbar-track {
         background: #657699;
         box-shadow: inset 0 0 5px grey;
@@ -50,6 +55,7 @@ html {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-ms-scrollbar-track {
         background: #657699;
         box-shadow: inset 0 0 5px grey;
@@ -59,6 +65,7 @@ html {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-o-scrollbar-track {
         background: #657699;
         box-shadow: inset 0 0 5px grey;
@@ -78,6 +85,7 @@ html {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-moz-scrollbar-thumb {
         background: #a2b5d6;
         border-radius: 30px;
@@ -86,6 +94,7 @@ html {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-ms-scrollbar-thumb {
         background: #a2b5d6;
         border-radius: 30px;
@@ -94,6 +103,7 @@ html {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-o-scrollbar-thumb {
         background: #a2b5d6;
         border-radius: 30px;
@@ -107,12 +117,15 @@ html {
     &::-webkit-scrollbar-thumb:hover {
         background: $headerColor;
     }
+
     &::-moz-scrollbar-thumb:hover {
         background: $headerColor;
     }
+
     &::-ms-scrollbar-thumb:hover {
         background: $headerColor;
     }
+
     &::-o-scrollbar-thumb:hover {
         background: $headerColor;
     }
@@ -288,12 +301,15 @@ img {
     &::-webkit-scrollbar {
         width: 10px;
     }
+
     &::-moz-scrollbar {
         width: 10px;
     }
+
     &::-ms-scrollbar {
         width: 10px;
     }
+
     &::-o-scrollbar {
         width: 10px;
     }
@@ -308,6 +324,7 @@ img {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-moz-scrollbar-track {
         background: #657699;
         box-shadow: inset 0 0 5px grey;
@@ -317,6 +334,7 @@ img {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-ms-scrollbar-track {
         background: #657699;
         box-shadow: inset 0 0 5px grey;
@@ -326,6 +344,7 @@ img {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-o-scrollbar-track {
         background: #657699;
         box-shadow: inset 0 0 5px grey;
@@ -345,6 +364,7 @@ img {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-moz-scrollbar-thumb {
         background: #a2b5d6;
         border-radius: 30px;
@@ -353,6 +373,7 @@ img {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-ms-scrollbar-thumb {
         background: #a2b5d6;
         border-radius: 30px;
@@ -361,6 +382,7 @@ img {
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
     }
+
     &::-o-scrollbar-thumb {
         background: #a2b5d6;
         border-radius: 30px;
@@ -374,12 +396,15 @@ img {
     &::-webkit-scrollbar-thumb:hover {
         background: $headerColor;
     }
+
     &::-moz-scrollbar-thumb:hover {
         background: $headerColor;
     }
+
     &::-ms-scrollbar-thumb:hover {
         background: $headerColor;
     }
+
     &::-o-scrollbar-thumb:hover {
         background: $headerColor;
     }
@@ -514,8 +539,8 @@ img {
 /*=======================================================
                 all-transaction page
 =======================================================*/
-.all-transactions{
-    .all-transaction-title{
+.all-transactions {
+    .all-transaction-title {
         color: $textColor;
         font-size: 24px;
         line-height: 1.3;
@@ -524,7 +549,8 @@ img {
         text-align: center;
         margin-bottom: 15px;
     }
-    .all-transaction-subtitle{
+
+    .all-transaction-subtitle {
         color: $textColor;
         font-size: 20px;
         line-height: 1.3;
@@ -534,11 +560,13 @@ img {
         margin-bottom: 30px;
         opacity: .7;
     }
-    .all-transaction-card-box{
+
+    .all-transaction-card-box {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        .card{
+
+        .card {
             width: 300px;
             padding: 30px;
             margin: 10px;
@@ -555,17 +583,20 @@ img {
             -moz-transition: .3s ease-in-out;
             -ms-transition: .3s ease-in-out;
             -o-transition: .3s ease-in-out;
-            &:hover{
+
+            &:hover {
                 box-shadow: 0 8px 32px $dateColor;
                 border-color: transparent;
                 -webkit-transform: translateY(-4px);
                 transform: translateY(-4px);
             }
-            svg{
+
+            svg {
                 width: 100px;
                 margin: 0 auto;
             }
-            .icon-title{
+
+            .icon-title {
                 color: $textColor;
                 font-size: 18px;
                 line-height: 1.3;
@@ -575,7 +606,8 @@ img {
                 margin-top: 20px;
                 margin-bottom: 10px;
             }
-            .icon-info{
+
+            .icon-info {
                 color: $textColor;
                 font-size: 16px;
                 line-height: 1.3;
@@ -722,6 +754,7 @@ img {
                 }
             }
 
+
             button {
                 display: flex;
                 flex-wrap: wrap;
@@ -747,8 +780,8 @@ img {
     #Transaction {
 
         /* bank-statement */
-        #bank-statement{
-            .upload-statement-title{
+        #bank-statement {
+            .upload-statement-title {
                 color: $textColor;
                 font-size: 26px;
                 line-height: 1.3;
@@ -756,9 +789,11 @@ img {
                 letter-spacing: 1px;
                 margin-bottom: 25px;
             }
-            .download-statement{
+
+            .download-statement {
                 margin-bottom: 30px;
-                .bank-statement-title{
+
+                .bank-statement-title {
                     color: $textColor;
                     font-size: 18px;
                     line-height: 1.3;
@@ -766,7 +801,8 @@ img {
                     letter-spacing: 1px;
                     margin-bottom: 15px;
                 }
-                .electronic-statement-info-box{
+
+                .electronic-statement-info-box {
                     border: 1px solid $dateColor;
                     // box-shadow: 0 8px 32px $dateColor;
                     padding: 20px 20px 15px;
@@ -775,24 +811,28 @@ img {
                     -moz-border-radius: 10px;
                     -ms-border-radius: 10px;
                     -o-border-radius: 10px;
-                    .desc{
+
+                    .desc {
                         color: $textColor;
                         font-size: 16px;
                         line-height: 1.3;
                         font-weight: 400;
                     }
-                    .suported-files{
+
+                    .suported-files {
                         display: flex;
                         align-items: center;
                         flex-wrap: wrap;
-                        .list-item{
+
+                        .list-item {
                             align-items: center;
                             color: $textColor;
                             font-size: 14px;
                             line-height: 1.3;
                             font-weight: 300;
                             margin: 0px 30px 10px 0;
-                            .formate{
+
+                            .formate {
                                 padding: 3px 13px 4px 15px;
                                 margin-right: 5px;
                                 background: $headerColor;
@@ -806,9 +846,11 @@ img {
                     }
                 }
             }
-            .upload-statement{
+
+            .upload-statement {
                 margin-bottom: 30px;
-                .bank-statement-title{
+
+                .bank-statement-title {
                     color: $textColor;
                     font-size: 18px;
                     line-height: 1.3;
@@ -816,7 +858,8 @@ img {
                     letter-spacing: 1px;
                     margin-bottom: 15px;
                 }
-                .electronic-statement-info-box{
+
+                .electronic-statement-info-box {
                     border: 1px solid $dateColor;
                     // box-shadow: 0 8px 32px $dateColor;
                     padding: 20px 20px 15px;
@@ -825,22 +868,25 @@ img {
                     -moz-border-radius: 10px;
                     -ms-border-radius: 10px;
                     -o-border-radius: 10px;
-                    .desc{
+
+                    .desc {
                         color: $textColor;
                         font-size: 16px;
                         line-height: 1.3;
                         font-weight: 400;
                     }
-                    form{
-                        #id_statement_container{
-                            .control-label{
+
+                    form {
+                        #id_statement_container {
+                            .control-label {
                                 color: $textColor;
                                 font-size: 16px;
                                 line-height: 1.3;
                                 font-weight: 400;
                                 opacity: .7;
                                 margin-bottom: 0;
-                                &::after{
+
+                                &::after {
                                     content: "*";
                                     color: #d00;
                                     font-size: 10px;
@@ -850,16 +896,19 @@ img {
                                 }
                             }
                         }
-                        #id_account_container{
+
+                        #id_account_container {
                             margin-top: 15px;
-                            .control-label{
+
+                            .control-label {
                                 color: $textColor;
                                 font-size: 16px;
                                 line-height: 1.3;
                                 font-weight: 400;
                                 opacity: .7;
                                 margin-bottom: 0;
-                                &::after{
+
+                                &::after {
                                     content: "*";
                                     color: #d00;
                                     font-size: 10px;
@@ -867,16 +916,19 @@ img {
                                     vertical-align: top;
                                 }
                             }
-                            .controls{
+
+                            .controls {
                                 display: flex;
                                 align-items: center;
-                                select{
+
+                                select {
                                     width: 200px;
                                     font-size: 16px;
                                     line-height: 1.3;
                                     font-weight: 400;
                                 }
-                                a{
+
+                                a {
                                     color: $textColor;
                                     font-size: 14px;
                                     line-height: 1.3;
@@ -884,13 +936,15 @@ img {
                                     display: flex;
                                     align-items: center;
                                     margin-left: 10px;
-                                    svg{
+
+                                    svg {
                                         width: 20px;
                                         color: $textColor;
                                     }
                                 }
                             }
-                            .help-block{
+
+                            .help-block {
                                 display: block;
                                 color: $textColor;
                                 font-size: 14px;
@@ -899,9 +953,10 @@ img {
                                 margin-bottom: 15px;
                             }
                         }
-                        .form-actions{
-                            div{
-                                button{
+
+                        .form-actions {
+                            div {
+                                button {
                                     color: $textColor;
                                     background: $bodyColor2;
                                     padding: 10px 25px;
@@ -916,7 +971,8 @@ img {
                                     -moz-transition: .3s ease-in-out;
                                     -ms-transition: .3s ease-in-out;
                                     -o-transition: .3s ease-in-out;
-                                    &:hover{
+
+                                    &:hover {
                                         color: $textColor;
                                         background: transparent;
                                         box-shadow: 0 8px 32px $dateColor;
@@ -930,39 +986,47 @@ img {
                                 }
                             }
                         }
-                        .wv-divider{
+
+                        .wv-divider {
                             width: 100%;
                             height: 1px;
                             background: $headerColor;
                             margin-top: 20px;
                             margin-bottom: 15px;
                         }
-                        .instruction-list{
-                            p{
+
+                        .instruction-list {
+                            p {
                                 font-size: 16px;
                                 line-height: 1.3;
                                 font-weight: 300;
                                 margin-left: -20px;
                                 margin-bottom: 10px;
-                                strong{
+
+                                strong {
                                     font-weight: 700;
                                 }
                             }
+
                             list-style-type: disc;
                             margin-left: 20px;
-                            li{
+
+                            li {
                                 font-size: 16px;
                                 line-height: 1.5;
                                 font-weight: 300;
                             }
                         }
-                        .help-artical-link{
+
+                        .help-artical-link {
                             font-weight: 300;
-                            strong{
+
+                            strong {
                                 font-size: 16px;
                                 line-height: 1.3;
                                 font-weight: 700;
-                                a{
+
+                                a {
                                     color: $dateColor;
                                     margin-left: 3px;
                                     margin-right: 3px;
@@ -972,9 +1036,11 @@ img {
                     }
                 }
             }
-            .manage-statement{
+
+            .manage-statement {
                 margin-bottom: 30px;
-                .bank-statement-title{
+
+                .bank-statement-title {
                     color: $textColor;
                     font-size: 18px;
                     line-height: 1.3;
@@ -982,7 +1048,8 @@ img {
                     letter-spacing: 1px;
                     margin-bottom: 15px;
                 }
-                .electronic-statement-info-box{
+
+                .electronic-statement-info-box {
                     border: 1px solid $dateColor;
                     // box-shadow: 0 8px 32px $dateColor;
                     padding: 20px;
@@ -991,13 +1058,15 @@ img {
                     -moz-border-radius: 10px;
                     -ms-border-radius: 10px;
                     -o-border-radius: 10px;
-                    .desc{
+
+                    .desc {
                         color: $textColor;
                         font-size: 16px;
                         line-height: 1.3;
                         font-weight: 400;
                         margin: 0;
-                        a{
+
+                        a {
                             color: $dateColor;
                             margin-left: 5px;
                             font-weight: 600;
@@ -1155,6 +1224,180 @@ img {
 
                         td {
                             padding: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #income-expense-toggle {
+            display: grid;
+            grid-template-columns: 1fr 440px;
+            column-gap: 5px;
+
+            #income-expense-btn-toggle {
+
+                /* width */
+                &::-webkit-scrollbar {
+                    width: 10px;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #657699;
+                    box-shadow: inset 0 0 5px grey;
+                    border-radius: 30px;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -ms-border-radius: 30px;
+                    -o-border-radius: 30px;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #a2b5d6;
+                    border-radius: 30px;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -ms-border-radius: 30px;
+                    -o-border-radius: 30px;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+
+                table {
+                    thead {
+                        tr {
+                            td {
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        background-color: $bodyColor1;
+
+                        tr {
+                            td {
+                                text-align: left;
+                                padding: 10px 0 10px 0;
+
+                                label {
+                                    font-size: 12px;
+                                    line-height: 1.3;
+                                    font-weight: 500;
+                                    // color: $dateColor;
+                                    display: block;
+                                    letter-spacing: 1px;
+                                    margin-bottom: 1px;
+                                    margin-left: 1px;
+                                }
+
+                                input,
+                                select {
+                                    font-size: 16px;
+                                    line-height: 1.3;
+                                    font-weight: 600;
+                                    width: 100%;
+                                    border: none;
+                                    color: $textColor;
+                                    background-color: transparent;
+
+                                    option,
+                                    optgroup {
+                                        background-color: $bodyColor1;
+                                    }
+                                }
+
+                                .write-discription,
+                                .dropdown {
+                                    padding: 5px 10px;
+                                    border: 1px solid $textColor;
+                                    border-radius: 5px;
+                                    -webkit-border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    -ms-border-radius: 5px;
+                                    -o-border-radius: 5px;
+                                }
+                                .dropdown-links{
+                                    button{
+                                        text-decoration: underline;
+                                        margin-top: 5px;
+                                        margin-right: 0;
+                                        margin-left: 10px;
+                                    }
+                                }
+
+                                .account-dropdown,
+                                .deposit-withdrawal {
+                                    padding: 5px 10px;
+                                    border-left: 1px solid $textColor;
+                                    border-top: 1px solid $textColor;
+                                    border-bottom: 1px solid $textColor;
+                                    border-radius: 5px 0 0 5px;
+                                    -webkit-border-radius: 5px 0 0 5px;
+                                    -moz-border-radius: 5px 0 0 5px;
+                                    -ms-border-radius: 5px 0 0 5px;
+                                    -o-border-radius: 5px 0 0 5px;
+                                }
+
+                                .date-picker,
+                                .total-amount {
+                                    padding: 5px 10px;
+                                    border: 1px solid $textColor;
+                                    border-radius: 0 5px 5px 0;
+                                    -webkit-border-radius: 0 5px 5px 0;
+                                    -moz-border-radius: 0 5px 5px 0;
+                                    -ms-border-radius: 0 5px 5px 0;
+                                    -o-border-radius: 0 5px 5px 0;
+                                }
+
+                                .date-picker {
+                                    input[type=date] {
+                                        appearance: textfield !important;
+                                        -webkit-appearance: textfield !important;
+                                        -moz-appearance: textfield !important;
+                                        -ms-appearance: textfield !important;
+                                        -o-appearance: textfield !important;
+                                        text-align: right;
+                                    }
+                                }
+
+                                .total-amount {
+                                    input[type=number] {
+                                        appearance: textfield !important;
+                                        -webkit-appearance: textfield !important;
+                                        -moz-appearance: textfield !important;
+                                        -ms-appearance: textfield !important;
+                                        -o-appearance: textfield !important;
+                                        text-align: right;
+                                    }
+                                }
+
+                                .line-break {
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: $dateColor;
+                                    margin-top: 5px;
+                                    margin-bottom: 5px;
+                                }
+                            }
+
+                            td.full-width {
+                                padding-left: 10px;
+                                padding-right: 10px;
+                            }
+
+                            td.full-width-first-half {
+                                padding-left: 10px;
+                            }
+
+                            td.full-width-second-half {
+                                padding-right: 10px;
+                            }
                         }
                     }
                 }

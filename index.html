@@ -337,8 +337,10 @@
                                     Once you have your electronic statement downloaded to your computer, upload it to
                                     Wave using the form below.
                                 </p>
-                                <form action="" method="POST" enctype="multipart/form-data" class="manual-import__form" id="CSVUploadForm">
-                                    <input type="hidden" name="csrfmiddlewaretoken" value="pqMvFQou4swLWLPEH5dQljDkTrTFqdsP">
+                                <form action="" method="POST" enctype="multipart/form-data" class="manual-import__form"
+                                    id="CSVUploadForm">
+                                    <input type="hidden" name="csrfmiddlewaretoken"
+                                        value="pqMvFQou4swLWLPEH5dQljDkTrTFqdsP">
                                     <div id="id_statement_container" class="control-group required">
                                         <label class="control-label" for="id_statement">Statement</label>
                                         <div class="controls" id="FileUploader">
@@ -358,11 +360,14 @@
                                             </select>
                                             <a href="#" title="Create a new account" rel="" class="">
                                                 <svg viewBox="0 0 20 20" id="add" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10 19a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm1-10V5.833c0-.46-.448-.833-1-.833s-1 .373-1 .833V9H5.833C5.373 9 5 9.448 5 10s.373 1 .833 1H9v3.167c0 .46.448.833 1 .833s1-.373 1-.833V11h3.167c.46 0 .833-.448.833-1s-.373-1-.833-1H11zm-1 8c4.067 0 7-2.933 7-7s-2.933-7-7-7-7 2.933-7 7 2.933 7 7 7z"></path>
+                                                    <path
+                                                        d="M10 19a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm1-10V5.833c0-.46-.448-.833-1-.833s-1 .373-1 .833V9H5.833C5.373 9 5 9.448 5 10s.373 1 .833 1H9v3.167c0 .46.448.833 1 .833s1-.373 1-.833V11h3.167c.46 0 .833-.448.833-1s-.373-1-.833-1H11zm-1 8c4.067 0 7-2.933 7-7s-2.933-7-7-7-7 2.933-7 7 2.933 7 7 7z">
+                                                    </path>
                                                 </svg>
                                             </a>
                                         </div>
-                                        <span class="help-block">Select the account for which you're uploading a statement, or add a new account.</span>
+                                        <span class="help-block">Select the account for which you're uploading a
+                                            statement, or add a new account.</span>
                                     </div>
                                     <div class="form-actions">
                                         <div>
@@ -373,7 +378,8 @@
                                     </div>
                                     <div class="wv-divider"></div>
                                     <ul class="instruction-list">
-                                        <p><strong>Can’t find the account you’re looking for?</strong> Create an account using the instructions below:</p>
+                                        <p><strong>Can’t find the account you’re looking for?</strong> Create an account
+                                            using the instructions below:</p>
                                         <li>Click "+" beside Payment Account drop-down menu</li>
                                         <li>Find savings and checking accounts under Asset &gt; Bank &gt; Bank &amp;
                                             Cash; you may create a custom account by selecting Other Bank Account</li>
@@ -383,7 +389,8 @@
                                     </ul>
                                     <div class="wv-divider"></div>
                                     <div class="help-artical-link">
-                                        <strong>Having trouble uploading a CSV? <a target="_blank" class="" href="#"> Visit our help article </a></strong>
+                                        <strong>Having trouble uploading a CSV? <a target="_blank" class="" href="#">
+                                                Visit our help article </a></strong>
                                         to download a CSV template and to fix common errors.</div>
                                 </form>
                             </div>
@@ -448,156 +455,244 @@
                             </div>
                         </div>
 
-                        <div class="table_height_container" style="max-height: 60vh; overflow-y: scroll;">
+                        <div id="income-expense-toggle">
+                            <!-- transaction entry table section -->
+                            <div class="table_height_container" style="max-height: 60vh; overflow-y: scroll;">
+                                <table class="entry-table">
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Select all</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><i class="fas fa-filter"></i> Filter</td>
+                                            <td><i class="fas fa-link"></i> Sort</td>
+                                            <td><i class="fas fa-search"></i> Search</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td>Jan 24, 2020</td>
+                                            <td>Consultancy Software Development</td>
+                                            <td>Rs 2231.00</td>
+                                            <td>Journal transaction</td>
+                                            <td></td>
+                                            <td>
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end of transaction entry table section -->
 
-                            <!-- table section -->
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Select all</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><i class="fas fa-filter"></i> Filter</td>
-                                        <td><i class="fas fa-link"></i> Sort</td>
-                                        <td><i class="fas fa-search"></i> Search</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>Jan 24, 2020</td>
-                                        <td>Consultancy Software Development</td>
-                                        <td>Rs 2231.00</td>
-                                        <td>Journal transaction</td>
-                                        <td></td>
-                                        <td>
-                                            <i class="fas fa-check"></i>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <!-- add income/expense -->
+                            <div id="income-expense-btn-toggle" class="" style="max-height: 60vh; overflow-y: scroll;">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>Edit transaction details</td>
+                                            <td>icon</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="write-discription">
+                                                    <label for="description">Description</label>
+                                                    <input name="description" type="text" value="Write a Description" placeholder="Write a Description">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="full-width-first-half">
+                                                <div class="account-dropdown">
+                                                    <label for="account">Account</label>
+                                                    <select class="" id="" name="account" tabindex="3">
+                                                        <optgroup label="Cash and Bank">
+                                                            <option value="" selected="selected">Cash on Hand</option>
+                                                        </optgroup>
+                                                        <optgroup label="Business Owner Contribution and Drawing">
+                                                            <option value="">Owner Investment/Drawing</option>
+                                                        </optgroup>
+                                                        <option value="">
+                                                            <button>
+                                                                <i>icon</i> Add a new account
+                                                            </button>
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td class="full-width-second-half">
+                                                <div class="date-picker">
+                                                    <label for="date">Date</label>
+                                                    <input type="date" name="date" id="">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="full-width-first-half">
+                                                <div class="deposit-withdrawal">
+                                                    <label for="transaction-type">Deposit or withdrawal</label>
+                                                    <select class="" id="" name="transaction-type" tabindex="2">
+                                                        <option value="" selected="selected">Deposit</option>
+                                                        <option value="">Withdrawal</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td class="full-width-second-half">
+                                                <div class="total-amount">
+                                                    <label for="amount">Total amount</label>
+                                                    <input type="number" name="amount" min="0" value="0.00" id="">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="line-break"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="dropdown">
+                                                    <label for="category">Category</label>
+                                                    <select class="" id="" name="category" tabindex="2">
+                                                        <option value="" selected="selected">Uncategorized Income</option>
+                                                        <option value="">Withdrawal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="dropdown-links">
+                                                    <button>Include sales tax</button>
+                                                    <button>Add customer</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end of add income/expense -->
                         </div>
                     </div>
 
