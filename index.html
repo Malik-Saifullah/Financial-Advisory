@@ -41,7 +41,6 @@
                         <img src="./assets/images/Icons/search.png" alt="">
                     </div>
                     <div class="profile" id="menu-toggle">
-
                         <!-- user profile image -->
                         <img src="./assets/images/Icons/Profile-Icon.png" alt="">
                     </div>
@@ -157,7 +156,7 @@
                         <h1 class="all-transaction-title">Track and organize all your transactions in one place.</h1>
                         <p class="all-transaction-subtitle">Choose an option to get started:</p>
                         <div class="all-transaction-card-box">
-                            <a href="#bank-statement" class="card">
+                            <a href="#BankStatement" class="card" onclick="openCity(event, 'BankStatement')">
                                 <svg viewBox="0 0 80 80" id="decor--cloud-upload" xmlns="http://www.w3.org/2000/svg">
                                     <g fill="none" fill-rule="nonzero">
                                         <circle cx="40" cy="40" r="38" fill="#5a6988"></circle>
@@ -172,7 +171,7 @@
                                 <h3 class="icon-title">Upload a bank statement</h3>
                                 <p class="icon-info">Import transactions from a CSV statement.</p>
                             </a>
-                            <a href="" class="card">
+                            <a href="#Transaction" class="card" onclick="openCity(event, 'Transaction')">
                                 <svg viewBox="0 0 80 80" id="decor--document-add" xmlns="http://www.w3.org/2000/svg">
                                     <g fill="none" fill-rule="evenodd">
                                         <circle cx="40" cy="40" r="38" fill="#5a6988" fill-rule="nonzero"></circle>
@@ -190,7 +189,7 @@
                                 <h3 class="icon-title">Add manual transactions</h3>
                                 <p class="icon-info">Enter transaction amounts as income or expense.</p>
                             </a>
-                            <a href="" class="card">
+                            <a href="https://www.google.com" class="card" target="_blank">
                                 <svg viewBox="0 0 80 80" id="decor--document-default"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g fill="none" fill-rule="nonzero">
@@ -296,124 +295,13 @@
                     </div> -->
                     <!-- End of starter template -->
 
-                    <!-- bank-statement -->
-                    <div id="bank-statement" class="upload-bank-statement">
-                        <h1 class="upload-statement-title">Upload a Bank Statement</h1>
-                        <div class="download-statement">
-                            <h3 class="bank-statement-title">1. Download your electronic statement</h3>
-                            <div class="electronic-statement-info-box">
-                                <p class="desc">
-                                    Visit your online banking website and download an electronic statement for your bank
-                                    or credit card account in any of these file types:
-                                </p>
-                                <ul class="suported-files">
-                                    <li class="list-item">
-                                        <span class="formate">.ofx</span>
-                                        Microsoft Money
-                                    </li>
-                                    <li class="list-item">
-                                        <span class="formate">.qbo</span>
-                                        QuickBooks
-                                    </li>
-                                    <li class="list-item">
-                                        <span class="formate">.qfx</span>
-                                        Quicken
-                                    </li>
-                                    <li class="list-item">
-                                        <span class="formate">.aso</span>
-                                        Simply Accounting
-                                    </li>
-                                    <li class="list-item">
-                                        <span class="formate">.csv</span>
-                                        CSV file
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="upload-statement">
-                            <h3 class="bank-statement-title">2. Upload your statement to Wave</h3>
-                            <div class="electronic-statement-info-box">
-                                <p class="desc">
-                                    Once you have your electronic statement downloaded to your computer, upload it to
-                                    Wave using the form below.
-                                </p>
-                                <form action="" method="POST" enctype="multipart/form-data" class="manual-import__form"
-                                    id="CSVUploadForm">
-                                    <input type="hidden" name="csrfmiddlewaretoken"
-                                        value="pqMvFQou4swLWLPEH5dQljDkTrTFqdsP">
-                                    <div id="id_statement_container" class="control-group required">
-                                        <label class="control-label" for="id_statement">Statement</label>
-                                        <div class="controls" id="FileUploader">
-                                            <input type="file" name="bank_statement" tabindex="1" required>
-                                        </div>
-                                    </div>
-                                    <div id="id_account_container" class="control-group required">
-                                        <label class="control-label" for="id_account">
-                                            Payment account
-                                        </label>
-                                        <div class="controls">
-                                            <select class="" id="id_account" name="account" tabindex="2">
-                                                <option value="" selected="selected">--------------------</option>
-                                                <optgroup label="Asset">
-                                                    <option value="577661757">Cash on Hand</option>
-                                                </optgroup>
-                                            </select>
-                                            <a href="#" title="Create a new account" rel="" class="">
-                                                <svg viewBox="0 0 20 20" id="add" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M10 19a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm1-10V5.833c0-.46-.448-.833-1-.833s-1 .373-1 .833V9H5.833C5.373 9 5 9.448 5 10s.373 1 .833 1H9v3.167c0 .46.448.833 1 .833s1-.373 1-.833V11h3.167c.46 0 .833-.448.833-1s-.373-1-.833-1H11zm-1 8c4.067 0 7-2.933 7-7s-2.933-7-7-7-7 2.933-7 7 2.933 7 7 7z">
-                                                    </path>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <span class="help-block">Select the account for which you're uploading a
-                                            statement, or add a new account.</span>
-                                    </div>
-                                    <div class="form-actions">
-                                        <div>
-                                            <button type="submit" class="">
-                                                Upload
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="wv-divider"></div>
-                                    <ul class="instruction-list">
-                                        <p><strong>Can’t find the account you’re looking for?</strong> Create an account
-                                            using the instructions below:</p>
-                                        <li>Click "+" beside Payment Account drop-down menu</li>
-                                        <li>Find savings and checking accounts under Asset &gt; Bank &gt; Bank &amp;
-                                            Cash; you may create a custom account by selecting Other Bank Account</li>
-                                        <li>Find credit cards and lines of credit under Liability/Credit Card &gt;
-                                            Current Liability; you may create a custom account by selecting Other
-                                            Current Bank Debt</li>
-                                    </ul>
-                                    <div class="wv-divider"></div>
-                                    <div class="help-artical-link">
-                                        <strong>Having trouble uploading a CSV? <a target="_blank" class="" href="#">
-                                                Visit our help article </a></strong>
-                                        to download a CSV template and to fix common errors.</div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="manage-statement">
-                            <h3 class="bank-statement-title">3. Manage your transactions</h3>
-                            <div class="electronic-statement-info-box">
-                                <p class="desc">
-                                    After you upload the file, Wave will add the transactions in the file to the
-                                    Imported Transactions page. <a href="#">Learn more.</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of bank-statement -->
-
                     <div class="heading_container">
                         <h3>Transactions</h3>
                         <div class="transaction_btn_box">
                             <div class="btn_box_inner whats-new">
                                 <i class="fas fa-gift"></i> What's new</div>
-                            <div class="btn_box_inner add-income">Add income</div>
-                            <div class="btn_box_inner add-expense">Add expense</div>
+                            <div class="btn_box_inner add-income showSection">Add income</div>
+                            <div class="btn_box_inner add-expense showSection">Add expense</div>
                             <div class="more">
 
                                 <!-- more button -->
@@ -455,7 +343,7 @@
                             </div>
                         </div>
 
-                        <div id="income-expense-toggle">
+                        <div id="income-expense-toggle" class="">
                             <!-- transaction entry table section -->
                             <div class="table_height_container" style="max-height: 60vh; overflow-y: scroll;">
                                 <table class="entry-table">
@@ -615,7 +503,7 @@
                                         <tr>
                                             <td>Edit transaction details</td>
                                             <td>
-                                                <i class="fas fa-times"></i>
+                                                <i id="btn-close" class="fas fa-times"></i>
                                             </td>
                                         </tr>
                                     </thead>
@@ -624,7 +512,8 @@
                                             <td colspan="2" class="full-width">
                                                 <div class="write-discription">
                                                     <label for="description">Description</label>
-                                                    <input name="description" type="text" value="Write a Description" placeholder="Write a Description">
+                                                    <input name="description" type="text" value="Write a Description"
+                                                        placeholder="Write a Description">
                                                 </div>
                                             </td>
                                         </tr>
@@ -681,13 +570,64 @@
                                                 <div class="dropdown">
                                                     <label for="category">Category</label>
                                                     <select class="" id="" name="category" tabindex="2">
-                                                        <option value="" selected="selected">Uncategorized Income</option>
+                                                        <option value="" selected="selected">Uncategorized Income
+                                                        </option>
                                                         <option value="">Withdrawal</option>
                                                     </select>
                                                 </div>
                                                 <div class="dropdown-links">
                                                     <button>Include sales tax</button>
                                                     <button>Add customer</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="tooltip-btn mx-auto">
+                                                    <button type="button" class="btn" data-toggle="tooltip"
+                                                        data-placement="top"
+                                                        title="Create multiple categories to associate (Split) this transaction between different accounts.">
+                                                        Split this deposit
+                                                        <i class="fas fa-info-circle"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="notes">
+                                                    <label for="textarea">Notes</label>
+                                                    <textarea name="textarea" class="" id="" rows="3"></textarea>
+                                                </div>
+                                                <div class="update-btn">
+                                                    <p>Transaction last modified on <span>October 17th, 2020</span></p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="line-break"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="btn-controlls">
+                                                    <div class="btn btn-delete" type="button">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </div>
+                                                    <div class="btn btn-copy" type="button" data-toggle="tooltip"
+                                                        data-placement="top"
+                                                        title="Save your current changes before you duplicate this transaction.">
+                                                        <i class="far fa-copy"></i>
+                                                    </div>
+                                                    <div class="btn btn-review" type="button" data-toggle="tooltip"
+                                                        data-placement="top"
+                                                        title="Categorize first to mark as reviewed">
+                                                        <span><i class="fas fa-check"></i> Mark as reviewed</span>
+                                                    </div>
+                                                    <div class="btn btn-save" type="button">
+                                                        <span>Save</span>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -702,6 +642,119 @@
                 <!-- End of transaction dropdown section -->
 
 
+
+                <div id="BankStatement" class="tabcontent">
+                    <!-- bank-statement -->
+                    <div id="bank-statement" class="upload-bank-statement">
+                        <h1 class="upload-statement-title">Upload a Bank Statement</h1>
+                        <div class="download-statement">
+                            <h3 class="bank-statement-title">1. Download your electronic statement</h3>
+                            <div class="electronic-statement-info-box">
+                                <p class="desc">
+                                    Visit your online banking website and download an electronic statement for your bank
+                                    or credit card account in any of these file types:
+                                </p>
+                                <ul class="suported-files">
+                                    <li class="list-item">
+                                        <span class="formate">.ofx</span>
+                                        Microsoft Money
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="formate">.qbo</span>
+                                        QuickBooks
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="formate">.qfx</span>
+                                        Quicken
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="formate">.aso</span>
+                                        Simply Accounting
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="formate">.csv</span>
+                                        CSV file
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="upload-statement">
+                            <h3 class="bank-statement-title">2. Upload your statement to Wave</h3>
+                            <div class="electronic-statement-info-box">
+                                <p class="desc">
+                                    Once you have your electronic statement downloaded to your computer, upload it to
+                                    Wave using the form below.
+                                </p>
+                                <form action="" method="POST" enctype="multipart/form-data" class="manual-import__form"
+                                    id="CSVUploadForm">
+                                    <input type="hidden" name="csrfmiddlewaretoken"
+                                        value="pqMvFQou4swLWLPEH5dQljDkTrTFqdsP">
+                                    <div id="id_statement_container" class="control-group required">
+                                        <label class="control-label" for="id_statement">Statement</label>
+                                        <div class="controls" id="FileUploader">
+                                            <input type="file" name="bank_statement" tabindex="1" required>
+                                        </div>
+                                    </div>
+                                    <div id="id_account_container" class="control-group required">
+                                        <label class="control-label" for="id_account">
+                                            Payment account
+                                        </label>
+                                        <div class="controls">
+                                            <select class="" id="id_account" name="account" tabindex="2">
+                                                <option value="" selected="selected">--------------------</option>
+                                                <optgroup label="Asset">
+                                                    <option value="577661757">Cash on Hand</option>
+                                                </optgroup>
+                                            </select>
+                                            <a href="#" title="Create a new account" rel="" class="">
+                                                <svg viewBox="0 0 20 20" id="add" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10 19a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm1-10V5.833c0-.46-.448-.833-1-.833s-1 .373-1 .833V9H5.833C5.373 9 5 9.448 5 10s.373 1 .833 1H9v3.167c0 .46.448.833 1 .833s1-.373 1-.833V11h3.167c.46 0 .833-.448.833-1s-.373-1-.833-1H11zm-1 8c4.067 0 7-2.933 7-7s-2.933-7-7-7-7 2.933-7 7 2.933 7 7 7z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <span class="help-block">Select the account for which you're uploading a
+                                            statement, or add a new account.</span>
+                                    </div>
+                                    <div class="form-actions">
+                                        <div>
+                                            <button type="submit" class="">
+                                                Upload
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="wv-divider"></div>
+                                    <ul class="instruction-list">
+                                        <p><strong>Can’t find the account you’re looking for?</strong> Create an account
+                                            using the instructions below:</p>
+                                        <li>Click "+" beside Payment Account drop-down menu</li>
+                                        <li>Find savings and checking accounts under Asset &gt; Bank &gt; Bank &amp;
+                                            Cash; you may create a custom account by selecting Other Bank Account</li>
+                                        <li>Find credit cards and lines of credit under Liability/Credit Card &gt;
+                                            Current Liability; you may create a custom account by selecting Other
+                                            Current Bank Debt</li>
+                                    </ul>
+                                    <div class="wv-divider"></div>
+                                    <div class="help-artical-link">
+                                        <strong>Having trouble uploading a CSV? <a target="_blank" class="" href="#">
+                                                Visit our help article </a></strong>
+                                        to download a CSV template and to fix common errors.</div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="manage-statement">
+                            <h3 class="bank-statement-title">3. Manage your transactions</h3>
+                            <div class="electronic-statement-info-box">
+                                <p class="desc">
+                                    After you upload the file, Wave will add the transactions in the file to the
+                                    Imported Transactions page. <a href="#">Learn more.</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of bank-statement -->
+                </div>
 
                 <!-- reconcilation section -->
                 <div id="Reconcilation" class="tabcontent">

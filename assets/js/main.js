@@ -64,3 +64,25 @@ $(document).ready(function () {
         e.preventDefault();
     });
 });
+
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+
+
+
+/*=======================================================
+                    income/expense
+=======================================================*/
+$(document).ready(function () {
+    $("#btn-close").click(function () {
+        $("#income-expense-btn-toggle").hide();
+        $("#income-expense-toggle").removeClass("income-expense-toggle");
+    });
+    $(".showSection").click(function () {
+        $("#income-expense-btn-toggle").show();
+        $("#income-expense-toggle").addClass("income-expense-toggle");
+    });
+});
