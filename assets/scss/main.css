@@ -424,6 +424,10 @@ img {
   background: -webkit-gradient(linear, right top, left top, from(#2f3944), to(#414d5a));
   background: linear-gradient(to left, #2f3944, #414d5a);
 }
+#aside nav.navbar ul.navbar-nav li.nav-item a.active {
+  background: -webkit-gradient(linear, right top, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to left, #2f3944, #414d5a);
+}
 #aside nav.navbar ul.navbar-nav li.nav-item a.nav-link {
   color: #dadfe9;
   display: -webkit-box;

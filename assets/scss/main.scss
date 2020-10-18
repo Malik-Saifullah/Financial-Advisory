@@ -442,6 +442,9 @@ img {
                 a:hover {
                     background: $bodyColor2;
                 }
+                a.active{
+                    background: $bodyColor2;
+                }
 
                 a.nav-link {
                     color: $textColor;
