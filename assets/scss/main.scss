@@ -442,7 +442,8 @@ img {
                 a:hover {
                     background: $bodyColor2;
                 }
-                a.active{
+
+                a.active {
                     background: $bodyColor2;
                 }
 
@@ -924,6 +925,56 @@ img {
 
                         td {
                             padding: 20px;
+                        }
+                    }
+
+                    tr.filter-box {
+                        td.outer-box {
+                            .inner-box {
+                                .filter-category-box {
+                                    .first-row {
+                                        .dropdown {
+                                            max-width: 200px;
+                                            width: 200px;
+                                            .multiple_select {
+                                                height: 18px;
+                                                width: 100%;
+                                                overflow: hidden;
+                                                -webkit-appearance: menulist;
+                                                position: relative;
+                                            }
+                                            .multiple_select::before {
+                                                content: var(--text);
+                                                display: block;
+                                                margin-left: 5px;
+                                                margin-bottom: 2px;
+                                            }
+
+                                            .multiple_select_active {
+                                                overflow: visible !important;
+                                            }
+
+                                            .multiple_select option {
+                                                display: none;
+                                                height: 18px;
+                                                background-color: white;
+                                            }
+
+                                            .multiple_select_active option {
+                                                display: block;
+                                            }
+
+                                            .multiple_select option::before {
+                                                content: "\2610";
+                                            }
+
+                                            .multiple_select option:checked::before {
+                                                content: "\2611";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
