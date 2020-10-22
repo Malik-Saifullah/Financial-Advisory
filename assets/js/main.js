@@ -97,30 +97,32 @@ $(document).ready(function () {
 
 
 /*=======================================================
-                    dropdown with checkbox
+        dropdown with checkbox of filter section
 =======================================================*/
-$(".multiple_select").mousedown(function (e) {
-    if (e.target.tagName == "OPTION") {
-        return; //don't close dropdown if i select option
-    }
-    $(this).toggleClass('multiple_select_active'); //close dropdown if click inside <select> box
+$(function () {
+    $("#checkbox-select ").bsMultiSelect({
+        placeholder: "Search . . ."
+    });
 });
 
-$(".multiple_select").on('blur', function (e) {
-    $(this).removeClass('multiple_select_active'); //close dropdown if click outside <select>
+
+
+
+/*=======================================================
+            show/hide more filter section
+=======================================================*/
+$(".filter-btn-box-container").click(function (f) {
+    f.preventDefault();
+    $("#filter-outer-box").toggleClass("filter-box");
 });
 
-$('.multiple_select option').mousedown(function (e) { //no ctrl to select multiple
-    e.preventDefault();
-    $(this).prop('selected', $(this).prop('selected') ? false : true); //set selected options on click
-    $(this).parent().change(); //trigger change event
-});
-
-$("#myFilter").on('change', function () {
-    var selected = $("#myFilter").val().toString(); //here I get all options and convert to string
-    var document_style = document.documentElement.style;
-    if (selected !== "")
-        document_style.setProperty('--text', "'" + " " + selected + " " + "'");
-    else
-        document_style.setProperty('--text', "'Select values'");
+$(document).ready(function () {
+    $("#show-hide-section-third").click(function () {
+        jQuery(".thired-row").css({ //this is used for multiple values
+            "display": "flex"
+        });
+        jQuery("#show-hide-section-third").css({ //this is used for multiple values
+            "display": "none"
+        });
+    });
 });

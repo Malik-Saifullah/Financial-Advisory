@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "../fontawesome/css/all.min.css";
 @import "./vendor/variables";
+// @import "../lib/BsMultiSelect/css/BsMultiSelect.min.css";
 
 
 /*=======================================================
@@ -635,6 +636,7 @@ img {
     background-color: $mainColor;
     float: left;
     padding-top: 70px;
+    padding-bottom: 70px;
 
     /* genaric styling for tabcontent */
     .tabcontent {
@@ -893,6 +895,12 @@ img {
                         }
 
                         td {
+                            .filter-btn-box-container {
+                                width: max-content;
+                                float: right;
+                                cursor: pointer;
+                            }
+
                             align-items: center;
 
                             i {
@@ -928,54 +936,277 @@ img {
                         }
                     }
 
-                    tr.filter-box {
+                    tr#filter-outer-box {
                         td.outer-box {
                             .inner-box {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
                                 .filter-category-box {
                                     .first-row {
-                                        .dropdown {
+                                        display: flex;
+                                        align-items: center;
+                                        flex-wrap: wrap;
+
+                                        .category,
+                                        .status,
+                                        .types {
+                                            background: $headerColor;
+                                            padding: 5px;
+                                            border: 1px solid $textColor;
+                                            border-radius: 10px;
+                                            -webkit-border-radius: 10px;
+                                            -moz-border-radius: 10px;
+                                            -ms-border-radius: 10px;
+                                            -o-border-radius: 10px;
+                                            margin-right: 10px;
+                                            margin-bottom: 10px;
+
+                                            label {
+                                                color: $textColor;
+                                                display: block;
+                                                margin: 0;
+                                                margin-bottom: 3px;
+                                                text-align: left;
+                                                // float: left;
+                                                font-size: 14px;
+                                            }
+
+                                            .dashboardcode-bsmultiselect {
+                                                position: relative;
+
+                                                .form-control {
+                                                    // background-color: transparent;
+                                                    border: none;
+
+                                                    li {
+                                                        display: flex;
+                                                        align-items: center;
+
+                                                        span {
+                                                            color: $dateColor;
+                                                            font-size: 14px;
+                                                        }
+
+                                                        button {
+                                                            margin: 0;
+                                                            margin-left: 5px;
+                                                            color: $dateColor;
+                                                        }
+                                                    }
+                                                }
+
+                                                .dropdown-menu {
+                                                    width: 100%;
+                                                    max-height: 300px;
+                                                    overflow-y: scroll;
+                                                    top: 5px !important;
+                                                    left: -12px !important;
+
+                                                    li {
+                                                        margin-top: 5px;
+                                                        margin-bottom: 5px;
+                                                        padding: 5px;
+
+                                                        &:hover {
+                                                            color: $textColor;
+                                                            background: $bodyColor2;
+
+                                                            div {
+                                                                label {
+                                                                    color: $textColor !important;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        div {
+                                                            align-items: center;
+                                                            cursor: pointer;
+
+                                                            label {
+                                                                margin-bottom: 0;
+
+                                                                &::before {
+                                                                    top: 0;
+                                                                }
+
+                                                                &::after {
+                                                                    top: 0;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .category {
+                                            max-width: 300px;
+                                            width: 300px;
+                                        }
+
+                                        .status {
+                                            max-width: 220px;
+                                            width: 220px;
+                                        }
+
+                                        .types {
+                                            max-width: 250px;
+                                            width: 250px;
+                                        }
+                                    }
+
+                                    .second-row,
+                                    #section-third {
+                                        // display: flex;
+                                        align-items: center;
+                                        flex-wrap: wrap;
+
+                                        .transaction-dates-box,
+                                        .first-date,
+                                        .last-date,
+                                        .transaction-last-modify-dates-box {
+                                            padding: 5px;
+                                            border: 1px solid $textColor;
+                                            border-radius: 10px;
+                                            -webkit-border-radius: 10px;
+                                            -moz-border-radius: 10px;
+                                            -ms-border-radius: 10px;
+                                            -o-border-radius: 10px;
+                                            margin-right: 10px;
+                                            margin-bottom: 10px;
+
+                                            label {
+                                                display: block;
+                                                margin: 0;
+                                                margin-bottom: 3px;
+                                                text-align: left;
+                                                // float: left;
+                                                font-size: 14px;
+                                            }
+
+                                            select,
+                                            input[type=date] {
+                                                width: 100%;
+                                                padding: 5px;
+                                                //background-color: transparent;
+                                                border: none;
+                                                border-radius: 5px;
+                                                -webkit-border-radius: 5px;
+                                                -moz-border-radius: 5px;
+                                                -ms-border-radius: 5px;
+                                                -o-border-radius: 5px;
+                                            }
+                                        }
+
+                                        .transaction-dates-box,
+                                        .transaction-last-modify-dates-box {
+                                            max-width: 250px;
+                                            width: 250px;
+                                        }
+
+                                        .first-date {
                                             max-width: 200px;
                                             width: 200px;
-                                            .multiple_select {
-                                                height: 18px;
-                                                width: 100%;
-                                                overflow: hidden;
-                                                -webkit-appearance: menulist;
-                                                position: relative;
-                                            }
-                                            .multiple_select::before {
-                                                content: var(--text);
-                                                display: block;
-                                                margin-left: 5px;
-                                                margin-bottom: 2px;
-                                            }
+                                        }
 
-                                            .multiple_select_active {
-                                                overflow: visible !important;
-                                            }
+                                        .last-date {
+                                            max-width: 220px;
+                                            width: 220px;
+                                        }
+                                    }
 
-                                            .multiple_select option {
-                                                display: none;
-                                                height: 18px;
-                                                background-color: white;
-                                            }
+                                    .second-row {
+                                        display: flex;
 
-                                            .multiple_select_active option {
-                                                display: block;
-                                            }
+                                        .more-filter-box {
+                                            button {
+                                                margin: 0;
+                                                font-size: 16px;
+                                                line-height: 1.3;
+                                                font-weight: 700;
+                                                letter-spacing: 1px;
 
-                                            .multiple_select option::before {
-                                                content: "\2610";
+                                                &:hover {
+                                                    text-decoration: underline;
+                                                }
                                             }
+                                        }
+                                    }
 
-                                            .multiple_select option:checked::before {
-                                                content: "\2611";
+                                    .thired-row {
+                                        display: none;
+                                    }
+                                }
+
+                                .apply-filter-box {
+                                    padding: 1rem 3rem;
+
+                                    .apply-filter-btn-box {
+                                        display: grid;
+
+                                        button.btn-apply {
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                            width: max-content;
+                                            border: 1px solid $dateColor;
+                                            border-radius: 30px;
+                                            -webkit-border-radius: 30px;
+                                            -moz-border-radius: 30px;
+                                            -ms-border-radius: 30px;
+                                            -o-border-radius: 30px;
+                                            background-color: $dateColor;
+                                            padding: 10px 30px;
+                                            margin: 0 auto;
+                                        }
+
+                                        .breadcrumb-box {
+                                            display: block;
+                                            margin-top: 10px;
+
+                                            .breadcrumb {
+                                                background-color: transparent;
+                                                margin-bottom: 0;
+
+                                                li {
+                                                    display: flex;
+                                                    align-items: center;
+
+                                                    button {
+                                                        font-size: 16px;
+                                                        font-weight: 500;
+                                                        line-height: 1.3;
+                                                        font-weight: 600;
+                                                        padding-left: 8px;
+                                                        padding-right: 8px;
+                                                        margin: 0;
+
+                                                        &:hover {
+                                                            text-decoration: underline;
+                                                        }
+                                                    }
+                                                }
+
+                                                li+li::before {
+                                                    font-size: 20px;
+                                                    line-height: 1;
+                                                    font-weight: 600;
+                                                    padding-left: 3px;
+                                                    padding-right: 3px;
+                                                    color: $textColor;
+                                                    content: ".";
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
                         }
+                    }
+
+                    tr.filter-box {
+                        display: none;
                     }
                 }
             }

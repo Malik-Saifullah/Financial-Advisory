@@ -312,9 +312,10 @@
 
                                 <!-- dropdown element -->
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item showSection" style="cursor: pointer;">Add journal
+                                        transaction</a>
+                                    <a class="dropdown-item" href="#BankStatement"
+                                        onclick="openCity(event, 'BankStatement')">Upload a bank statement</a>
                                 </div>
                             </div>
                         </div>
@@ -345,7 +346,7 @@
 
                         <div id="income-expense-toggle" class="">
                             <!-- transaction entry table section -->
-                            <div class="table_height_container" style="max-height: 60vh; overflow-y: scroll;">
+                            <div class="table_height_container" style="max-height: 75vh; overflow-y: scroll;">
                                 <table class="entry-table">
                                     <thead>
                                         <tr>
@@ -355,28 +356,283 @@
                                             <td>Select all</td>
                                             <td></td>
                                             <td></td>
-                                            <td><i class="fas fa-filter"></i> Filter</td>
+                                            <td>
+                                                <div class="filter-btn-box-container">
+                                                    <i class="fas fa-filter"></i> Filter
+                                                </div>
+                                            </td>
                                             <td><i class="fas fa-link"></i> Sort</td>
                                             <td><i class="fas fa-search"></i> Search</td>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="filter-box">
+                                        <tr class="filter-box" id="filter-outer-box">
                                             <td colspan="7" class="outer-box">
                                                 <div class="inner-box">
                                                     <div class="filter-category-box">
                                                         <div class="first-row">
-                                                            <div class="dropdown">
-                                                                <label for="multiple_select">Category</label>
-                                                                <select id="myFilter" class="multiple_select" multiple>
+                                                            <div class="category">
+                                                                <label for="category_multiple_select">Category</label>
+                                                                <select name="category_multiple_select"
+                                                                    id="checkbox-select" class="form-control"
+                                                                    multiple="multiple" style="display: none;">
+                                                                    <option>Uncategorized</option>
+                                                                    <option>Transfers</option>
+                                                                    <optgroup label="Invoices in wave">
+                                                                        <option value="" class="parent-category">
+                                                                            Invoices in wave</option>
+                                                                        <option value="" class="child-category">Payments
+                                                                        </option>
+                                                                        <option value="" class="child-category">Refunds
+                                                                        </option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Bills in Wave">
+                                                                        <option value="" class="parent-category">Bills
+                                                                            in Wave</option>
+                                                                        <option value="" class="child-category">Payments
+                                                                        </option>
+                                                                        <option value="" class="child-category">Refunds
+                                                                        </option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Income accounts">
+                                                                        <option value="" class="parent-category">Income
+                                                                            accounts</option>
+                                                                        <option value="" class="child-category">Gain on
+                                                                            Foreign Exchange</option>
+                                                                        <option value="" class="child-category">Sales
+                                                                        </option>
+                                                                        <option value="" class="child-category">
+                                                                            Uncategorized Income</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Expense accounts">
+                                                                        <option value="" class="parent-category">Expense
+                                                                            accounts</option>
+                                                                        <option value="">Accounting Feed</option>
+                                                                        <option value="">Avertising& promotion</option>
+                                                                        <option value="">Bank Service Charges</option>
+                                                                        <option value="">Computer - Hardware</option>
+                                                                        <option value="">Computer - Hosting</option>
+                                                                        <option value="">Computer - Internet</option>
+                                                                        <option value="">Computer - Software</option>
+                                                                        <option value="">Depreciation Expense</option>
+                                                                        <option value="">Insurance - Vehicles</option>
+                                                                        <option value="">Interes Expense</option>
+                                                                        <option value="">Loss on Foreign Exchange
+                                                                        </option>
+                                                                        <option value="">Meals and Entertainment
+                                                                        </option>
+                                                                        <option value="">Office supplies</option>
+                                                                        <option value="">Payroll - Employee Benefits
+                                                                        </option>
+                                                                        <option value="">Payroll - Employer's Share of
+                                                                            Benefits</option>
+                                                                        <option value="">Payroll - Salary & Wages
+                                                                        </option>
+                                                                        <option value="">Professional fees</option>
+                                                                        <option value="">Rent Expense</option>
+                                                                        <option value="">Repair & Maintenance</option>
+                                                                        <option value="">Telephone - Land Line</option>
+                                                                        <option value="">Telephone - Wireless</option>
+                                                                        <option value="">Travel Expense</option>
+                                                                        <option value="">Uncategorized Expense</option>
+                                                                        <option value="">Utilities</option>
+                                                                        <option value="">Vehical - Fuel</option>
+                                                                        <option value="">Vehical - Repair & Maintenance
+                                                                        </option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Asset Accounts">
+                                                                        <option value="" class="parent-category">Asset
+                                                                            Accounts</option>
+                                                                        <option value="">Account Receivable</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Equity Accounts">
+                                                                        <option value="" class="parent-category">Equity
+                                                                            Accounts</option>
+                                                                        <option value="">BIG IMMERSIVE</option>
+                                                                        <option value="">Owner Investment / Drawing
+                                                                        </option>
+                                                                        <option value="">Owner Equity</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Liability Accounts">
+                                                                        <option value="" class="parent-category">
+                                                                            Liability Accounts</option>
+                                                                        <option value="">Accounts Payable</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                            <div class="status">
+                                                                <label for="status_multiple_select">Status</label>
+                                                                <select name="status_multiple_select"
+                                                                    id="checkbox-select" class="form-control"
+                                                                    multiple="multiple" style="display: none;">
+                                                                    <option>Reviewed</option>
+                                                                    <option>Not Reviewed</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="types">
+                                                                <label for="types_multiple_select">Types</label>
+                                                                <select name="types_multiple_select"
+                                                                    id="checkbox-select" class="form-control"
+                                                                    multiple="multiple" style="display: none;">
                                                                     <option>Deposit</option>
                                                                     <option>Withdrawal</option>
                                                                     <option>Journal</option>
                                                                 </select>
                                                             </div>
                                                         </div>
+                                                        <div class="second-row">
+                                                            <div class="transaction-dates-box">
+                                                                <label for="transaction-dates">Transaction Date</label>
+                                                                <select class="" id="" name="transaction-dates"
+                                                                    tabindex="3">
+                                                                    <optgroup label="Calendar Year">
+                                                                        <option>2020</option>
+                                                                        <option>2019</option>
+                                                                        <option>2018</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Calendar Quarter">
+                                                                        <option>Q4 2020</option>
+                                                                        <option>Q3 2020</option>
+                                                                        <option>Q2 2020</option>
+                                                                        <option>Q1 2020</option>
+                                                                        <option>Q4 2019</option>
+                                                                        <option>Q3 2019</option>
+                                                                        <option>Q2 2019</option>
+                                                                        <option>Q1 2019</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Month">
+                                                                        <option>October 2020</option>
+                                                                        <option>September 2020</option>
+                                                                        <option>August 2020</option>
+                                                                        <option>July 2020</option>
+                                                                        <option>June 2020</option>
+                                                                        <option>May 2020</option>
+                                                                        <option>April 2020</option>
+                                                                        <option>March 2020</option>
+                                                                        <option>February 2020</option>
+                                                                        <option>January 2020</option>
+                                                                        <option>December 2019</option>
+                                                                        <option>November 2019</option>
+                                                                        <option>October 2019</option>
+                                                                        <option>September 2019</option>
+                                                                        <option>August 2019</option>
+                                                                        <option>July 2019</option>
+                                                                        <option>June 2019</option>
+                                                                        <option>May 2019</option>
+                                                                        <option>April 2019</option>
+                                                                        <option>March 2019</option>
+                                                                        <option>February 2019</option>
+                                                                        <option>January 2019</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Other">
+                                                                        <option>This week</option>
+                                                                        <option>Previous week</option>
+                                                                        <option>Last 4 week</option>
+                                                                        <option>Last 30 days</option>
+                                                                        <option>Last 60 days</option>
+                                                                        <option>Last 90 days</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Custom">
+                                                                        <option>Custom</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                            <div class="first-date">
+                                                                <label for="first-date">From</label>
+                                                                <input type="date" name="first-date" id="first-date">
+                                                            </div>
+                                                            <div class="last-date">
+                                                                <label for="last-date">To</label>
+                                                                <input type="date" name="last-date" id="last-date">
+                                                            </div>
+                                                            <div class="more-filter-box" id="show-hide-section-third">
+                                                                <button>More filters</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="thired-row" id="section-third">
+                                                            <div class="transaction-last-modify-dates-box">
+                                                                <label for="transaction-last-modify-dates">Last Modified
+                                                                    Dates</label>
+                                                                <select class="" id=""
+                                                                    name="transaction-last-modify-dates" tabindex="3">
+                                                                    <optgroup label="Calendar Year">
+                                                                        <option>2020</option>
+                                                                        <option>2019</option>
+                                                                        <option>2018</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Calendar Quarter">
+                                                                        <option>Q4 2020</option>
+                                                                        <option>Q3 2020</option>
+                                                                        <option>Q2 2020</option>
+                                                                        <option>Q1 2020</option>
+                                                                        <option>Q4 2019</option>
+                                                                        <option>Q3 2019</option>
+                                                                        <option>Q2 2019</option>
+                                                                        <option>Q1 2019</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Month">
+                                                                        <option>October 2020</option>
+                                                                        <option>September 2020</option>
+                                                                        <option>August 2020</option>
+                                                                        <option>July 2020</option>
+                                                                        <option>June 2020</option>
+                                                                        <option>May 2020</option>
+                                                                        <option>April 2020</option>
+                                                                        <option>March 2020</option>
+                                                                        <option>February 2020</option>
+                                                                        <option>January 2020</option>
+                                                                        <option>December 2019</option>
+                                                                        <option>November 2019</option>
+                                                                        <option>October 2019</option>
+                                                                        <option>September 2019</option>
+                                                                        <option>August 2019</option>
+                                                                        <option>July 2019</option>
+                                                                        <option>June 2019</option>
+                                                                        <option>May 2019</option>
+                                                                        <option>April 2019</option>
+                                                                        <option>March 2019</option>
+                                                                        <option>February 2019</option>
+                                                                        <option>January 2019</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Other">
+                                                                        <option>This week</option>
+                                                                        <option>Previous week</option>
+                                                                        <option>Last 4 week</option>
+                                                                        <option>Last 30 days</option>
+                                                                        <option>Last 60 days</option>
+                                                                        <option>Last 90 days</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Custom">
+                                                                        <option>Custom</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                            <div class="first-date">
+                                                                <label for="first-date">From</label>
+                                                                <input type="date" name="first-date" id="first-date">
+                                                            </div>
+                                                            <div class="last-date">
+                                                                <label for="last-date">To</label>
+                                                                <input type="date" name="last-date" id="last-date">
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="apply-filter-box"></div>
+                                                    <div class="apply-filter-box">
+                                                        <div class="apply-filter-btn-box">
+                                                            <button class="btn-apply">Apply</button>
+                                                            <div class="breadcrumb-box">
+                                                                <ul class="breadcrumb">
+                                                                    <li>
+                                                                        <button>Clear all</button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button
+                                                                            class="filter-btn-box-container">Hide</button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -516,7 +772,7 @@
                             <!-- end of transaction entry table section -->
 
                             <!-- add income/expense -->
-                            <div id="income-expense-btn-toggle" class="" style="max-height: 60vh; overflow-y: scroll;">
+                            <div id="income-expense-btn-toggle" class="" style="max-height: 75vh; overflow-y: scroll;">
                                 <table>
                                     <thead>
                                         <tr>
@@ -995,7 +1251,7 @@
 
                             <!-- liabilities & credit cart tab link content -->
                             <div id="menu1" class="tab-pane fade">
-                                <div class="table_height_container" style="max-height: 60vh; overflow-y: scroll;">
+                                <div class="table_height_container" style="max-height: 75vh; overflow-y: scroll;">
 
                                     <!-- credit card table section -->
                                     <div class="credit-card">
@@ -1314,7 +1570,7 @@
                             <!-- income tab link content -->
                             <div id="menu2" class="tab-pane fade">
                                 <div class="table_container">
-                                    <div class="table_height_container" style="max-height: 60vh; overflow-y: scroll;">
+                                    <div class="table_height_container" style="max-height: 75vh; overflow-y: scroll;">
                                         <table>
                                             <p class="table_heading">Income <i class="far fa-question-circle"></i></p>
                                             <tbody>
@@ -1455,6 +1711,7 @@
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
     <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/lib/BsMultiSelect/js/BsMultiSelect.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

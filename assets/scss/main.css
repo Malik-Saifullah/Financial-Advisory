@@ -607,6 +607,7 @@ img {
   background-color: #515e7a;
   float: left;
   padding-top: 70px;
+  padding-bottom: 70px;
   /* genaric styling for tabcontent */
   /* transaction tab */
   /* chart tab */
@@ -854,6 +855,13 @@ img {
   background: -webkit-gradient(linear, left bottom, left top, from(#2f3944), to(#414d5a));
   background: linear-gradient(to top, #2f3944, #414d5a);
 }
+#main #Transaction .table_container table thead tr td .filter-btn-box-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  float: right;
+  cursor: pointer;
+}
 #main #Transaction .table_container table thead tr td i {
   font-size: 12px;
   margin-right: 5px;
@@ -872,39 +880,309 @@ img {
 #main #Transaction .table_container table tbody tr td {
   padding: 20px;
 }
-#main #Transaction .table_container table tbody tr.filter-box td.outer-box .inner-box .filter-category-box .first-row .dropdown {
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types {
+  background: -webkit-gradient(linear, left bottom, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to top, #2f3944, #414d5a);
+  padding: 5px;
+  border: 1px solid #dadfe9;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types label {
+  color: #dadfe9;
+  display: block;
+  margin: 0;
+  margin-bottom: 3px;
+  text-align: left;
+  font-size: 14px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect {
+  position: relative;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .form-control,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .form-control,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .form-control {
+  border: none;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .form-control li,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .form-control li,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .form-control li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .form-control li span,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .form-control li span,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .form-control li span {
+  color: #303a45;
+  font-size: 14px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .form-control li button,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .form-control li button,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .form-control li button {
+  margin: 0;
+  margin-left: 5px;
+  color: #303a45;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .dropdown-menu,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .dropdown-menu,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .dropdown-menu {
+  width: 100%;
+  max-height: 300px;
+  overflow-y: scroll;
+  top: 5px !important;
+  left: -12px !important;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .dropdown-menu li,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .dropdown-menu li,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .dropdown-menu li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .dropdown-menu li:hover,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .dropdown-menu li:hover,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .dropdown-menu li:hover {
+  color: #dadfe9;
+  background: -webkit-gradient(linear, right top, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to left, #2f3944, #414d5a);
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .dropdown-menu li:hover div label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .dropdown-menu li:hover div label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .dropdown-menu li:hover div label {
+  color: #dadfe9 !important;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .dropdown-menu li div,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .dropdown-menu li div,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .dropdown-menu li div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .dropdown-menu li div label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .dropdown-menu li div label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .dropdown-menu li div label {
+  margin-bottom: 0;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .dropdown-menu li div label::before,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .dropdown-menu li div label::before,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .dropdown-menu li div label::before {
+  top: 0;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category .dashboardcode-bsmultiselect .dropdown-menu li div label::after,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status .dashboardcode-bsmultiselect .dropdown-menu li div label::after,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types .dashboardcode-bsmultiselect .dropdown-menu li div label::after {
+  top: 0;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .category {
+  max-width: 300px;
+  width: 300px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .status {
+  max-width: 220px;
+  width: 220px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .first-row .types {
+  max-width: 250px;
+  width: 250px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-dates-box,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .first-date,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .last-date,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-last-modify-dates-box,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-dates-box,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .first-date,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .last-date,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-last-modify-dates-box {
+  padding: 5px;
+  border: 1px solid #dadfe9;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-dates-box label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .first-date label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .last-date label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-last-modify-dates-box label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-dates-box label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .first-date label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .last-date label,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-last-modify-dates-box label {
+  display: block;
+  margin: 0;
+  margin-bottom: 3px;
+  text-align: left;
+  font-size: 14px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-dates-box select,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-dates-box input[type=date],
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .first-date select,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .first-date input[type=date],
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .last-date select,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .last-date input[type=date],
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-last-modify-dates-box select,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-last-modify-dates-box input[type=date],
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-dates-box select,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-dates-box input[type=date],
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .first-date select,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .first-date input[type=date],
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .last-date select,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .last-date input[type=date],
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-last-modify-dates-box select,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-last-modify-dates-box input[type=date] {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-dates-box,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .transaction-last-modify-dates-box,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-dates-box,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .transaction-last-modify-dates-box {
+  max-width: 250px;
+  width: 250px;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .first-date,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .first-date {
   max-width: 200px;
   width: 200px;
 }
-#main #Transaction .table_container table tbody tr.filter-box td.outer-box .inner-box .filter-category-box .first-row .dropdown .multiple_select {
-  height: 18px;
-  width: 100%;
-  overflow: hidden;
-  -webkit-appearance: menulist;
-  position: relative;
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .last-date,
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box #section-third .last-date {
+  max-width: 220px;
+  width: 220px;
 }
-#main #Transaction .table_container table tbody tr.filter-box td.outer-box .inner-box .filter-category-box .first-row .dropdown .multiple_select::before {
-  content: var(--text);
-  display: block;
-  margin-left: 5px;
-  margin-bottom: 2px;
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-#main #Transaction .table_container table tbody tr.filter-box td.outer-box .inner-box .filter-category-box .first-row .dropdown .multiple_select_active {
-  overflow: visible !important;
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .more-filter-box button {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
-#main #Transaction .table_container table tbody tr.filter-box td.outer-box .inner-box .filter-category-box .first-row .dropdown .multiple_select option {
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .second-row .more-filter-box button:hover {
+  text-decoration: underline;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .filter-category-box .thired-row {
   display: none;
-  height: 18px;
-  background-color: white;
 }
-#main #Transaction .table_container table tbody tr.filter-box td.outer-box .inner-box .filter-category-box .first-row .dropdown .multiple_select_active option {
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .apply-filter-box {
+  padding: 1rem 3rem;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .apply-filter-box .apply-filter-btn-box {
+  display: grid;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .apply-filter-box .apply-filter-btn-box button.btn-apply {
+  font-size: 16px;
+  font-weight: 600;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid #303a45;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: #303a45;
+  padding: 10px 30px;
+  margin: 0 auto;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .apply-filter-box .apply-filter-btn-box .breadcrumb-box {
   display: block;
+  margin-top: 10px;
 }
-#main #Transaction .table_container table tbody tr.filter-box td.outer-box .inner-box .filter-category-box .first-row .dropdown .multiple_select option::before {
-  content: "\2610";
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .apply-filter-box .apply-filter-btn-box .breadcrumb-box .breadcrumb {
+  background-color: transparent;
+  margin-bottom: 0;
 }
-#main #Transaction .table_container table tbody tr.filter-box td.outer-box .inner-box .filter-category-box .first-row .dropdown .multiple_select option:checked::before {
-  content: "\2611";
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .apply-filter-box .apply-filter-btn-box .breadcrumb-box .breadcrumb li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .apply-filter-box .apply-filter-btn-box .breadcrumb-box .breadcrumb li button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  font-weight: 600;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .apply-filter-box .apply-filter-btn-box .breadcrumb-box .breadcrumb li button:hover {
+  text-decoration: underline;
+}
+#main #Transaction .table_container table tbody tr#filter-outer-box td.outer-box .inner-box .apply-filter-box .apply-filter-btn-box .breadcrumb-box .breadcrumb li + li::before {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 600;
+  padding-left: 3px;
+  padding-right: 3px;
+  color: #dadfe9;
+  content: ".";
+}
+#main #Transaction .table_container table tbody tr.filter-box {
+  display: none;
 }
 #main #Transaction .income-expense-toggle {
   display: grid;
