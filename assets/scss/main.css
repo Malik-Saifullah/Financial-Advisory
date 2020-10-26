@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url(../fontawesome/css/all.min.css);
+@import url(../lib/bootstrap-select/css/bootstrap-select.min.css);
+@import url(../lib/jqTreeJs/css/jqtree.css);
 /*=======================================================
                     Basic Styling
 =======================================================*/
@@ -807,18 +809,7 @@ img {
   vertical-align: center;
 }
 #main #Transaction .table_container .table_container_btn_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 400px;
   margin-bottom: 20px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -828,15 +819,68 @@ img {
   background-color: #5a6988;
   padding: 10px 20px;
 }
-#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box:nth-child(1) {
-  margin-right: 80px;
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .selected-option-content .selected-option-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  cursor: pointer;
 }
-#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown button {
-  background-color: transparent;
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .selected-option-content .selected-option-text span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .selected-option-content .selected-option-text span i {
+  padding-left: 15px;
+}
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .select-option-title {
+  font-size: 16px;
+  font-weight: 700;
   margin: 0;
 }
-#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown button::after {
-  margin-left: 10px;
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .select-option-text {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+}
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .select-option-text span {
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .btn-container-of-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .btn-container-of-select button {
+  margin: 0;
 }
 #main #Transaction .table_container table thead tr td:nth-last-child(2),
 #main #Transaction .table_container table thead tr td:nth-last-child(3) {
@@ -1416,6 +1460,14 @@ img {
 #main #Transaction #income-expense-btn-toggle table tbody tr td.full-width-second-half {
   padding-right: 10px;
 }
+#main #Transaction #new-account .modal-dialog .modal-content .modal-body form .form-group input, #main #Transaction #new-account .modal-dialog .modal-content .modal-body form .form-group textarea {
+  width: 300px;
+  float: right;
+}
+#main #Transaction #new-account .modal-dialog .modal-content .modal-body form .form-group label {
+  color: #303a45;
+  padding-right: 20px;
+}
 #main #BankStatement {
   /* bank-statement */
 }
@@ -1585,8 +1637,7 @@ img {
 }
 #main #BankStatement #bank-statement .upload-statement .electronic-statement-info-box form .form-actions div button {
   color: #dadfe9;
-  background: -webkit-gradient(linear, right top, left top, from(#2f3944), to(#414d5a));
-  background: linear-gradient(to left, #2f3944, #414d5a);
+  background: transparent;
   padding: 10px 25px;
   border: 1px solid #303a45;
   border-radius: 30px;
@@ -1602,7 +1653,8 @@ img {
 }
 #main #BankStatement #bank-statement .upload-statement .electronic-statement-info-box form .form-actions div button:hover {
   color: #dadfe9;
-  background: transparent;
+  background: -webkit-gradient(linear, right top, left top, from(#2f3944), to(#414d5a));
+  background: linear-gradient(to left, #2f3944, #414d5a);
   -webkit-box-shadow: 0 8px 32px #303a45;
           box-shadow: 0 8px 32px #303a45;
   border-color: transparent;

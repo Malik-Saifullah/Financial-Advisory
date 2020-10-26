@@ -321,24 +321,81 @@
                         </div>
                     </div>
 
+
+                    <!-- Modal for add new account -->
+                    <div class="modal fade" id="new-account" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle" style="color: #303a45;">Add an Account</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-2">
+                                            <label for="exampleFormControlInput1" style="color: #303a45; padding-right: 67px;">Account Type</label>
+                                            <select class="selectpicker" data-width="300px" id="exampleFormControlInput1" data-live-search="true">
+                                                <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                                                <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                                                <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput2">Account Name</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect3">Account ID</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput3">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Description</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="3"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary rounded-pill" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary rounded-pill">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Modal for add new account -->
+
                     <div class="table_container">
                         <div class="table_container_btn_box">
-                            <div class="table_container_inner_btn_box">All aacount</div>
                             <div class="table_container_inner_btn_box">
                                 <div class="dropdown">
+                                    <div class="selected-option-content">
+                                        <p class="selected-option-text">
+                                            <span>All acounts </span>
+                                            <span>-Rs 3,000.00 <i class="fas fa-sort-down"></i></span>
+                                        </p>
+                                    </div>
+                                    <div class="options-box">
+                                        <p class="select-option-title">Cash and Bank</p>
+                                        <p class="select-option-text">
+                                            <span>Cash on Bank </span>
+                                            <span>-Rs 3,000.00</span>
+                                        </p>
+                                        <p class="select-option-text">
+                                            <span>All acounts </span>
+                                            <span>-Rs 3,000.00</span>
+                                        </p>
+                                        <div class="btn-container-of-select">
+                                            <button onclick="openCity(event, 'BankStatement')" class="btn">
+                                                <i class="far fa-file-alt"></i> Upload bank statement
+                                            </button>
 
-                                    <!-- dropdown button of price filter -->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Rs 3,043.00 , 780.00
-                                    </button>
-
-                                    <!-- dropdown element -->
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                data-target="#new-account">
+                                                <i class="fas fa-plus-circle"></i> Add a new account</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -918,6 +975,85 @@
 
 
 
+                <!-- Modal for add new BankStatement -->
+                <div class="modal fade" id="new-BankStatement" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle" style="color: #303a45;">Create a new account</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="nav-tab-box mt-3 mb-3">
+                                    <div class="">
+                                        <div class="">
+                                            <div class="nav nav-tabs" id="v-pills-tab" role="tablist">
+                                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                                    href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                                    aria-selected="true">Home</a>
+                                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                                    href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                                    aria-selected="false">Profile</a>
+                                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                                    href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                                    aria-selected="false">Messages</a>
+                                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                                                    href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                                    aria-selected="false">Settings</a>
+                                            </div>
+                                        </div>
+                                        <div class="p-3">
+                                            <div class="tab-content" id="v-pills-tabContent">
+                                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                                    aria-labelledby="v-pills-home-tab">
+                                                    <ul class="">
+                                                        <li class="list-item">
+                                                            <a href="#">Bla Bla</a>
+                                                        </li>
+                                                        <li class="list-item">
+                                                            <a href="#">Bla Bla</a>
+                                                        </li>
+                                                        <li class="list-item">
+                                                            <a href="#">Bla Bla</a>
+                                                        </li>
+                                                        <li class="list-item">
+                                                            <a href="#">Bla Bla</a>
+                                                        </li>
+                                                        <li class="list-item">
+                                                            <a href="#">Bla Bla</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                                    aria-labelledby="v-pills-profile-tab">
+                                                    <p>Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua
+                                                        anim Lorem sint. Veniam sint duis incididunt do esse magna
+                                                        mollit excepteur laborum qui. Id id reprehenderit sit est eu
+                                                        aliqua occaecat quis et velit excepteur laborum mollit dolore
+                                                        eiusmod. Ipsum dolor in occaecat commodo et voluptate minim
+                                                        reprehenderit mollit pariatur. Deserunt non laborum enim et
+                                                        cillum eu deserunt excepteur ea incididunt minim occaecat.</p>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                                    aria-labelledby="v-pills-messages-tab">...</div>
+                                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                                    aria-labelledby="v-pills-settings-tab">...</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary rounded-pill" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Modal for add new BankStatement -->
+
                 <div id="BankStatement" class="tabcontent">
                     <!-- bank-statement -->
                     <div id="bank-statement" class="upload-bank-statement">
@@ -981,7 +1117,7 @@
                                                     <option value="577661757">Cash on Hand</option>
                                                 </optgroup>
                                             </select>
-                                            <a href="#" title="Create a new account" rel="" class="">
+                                            <a href="#" title="Create a new account"  data-toggle="modal" data-target="#new-BankStatement" rel="" class="">
                                                 <svg viewBox="0 0 20 20" id="add" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M10 19a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm1-10V5.833c0-.46-.448-.833-1-.833s-1 .373-1 .833V9H5.833C5.373 9 5 9.448 5 10s.373 1 .833 1H9v3.167c0 .46.448.833 1 .833s1-.373 1-.833V11h3.167c.46 0 .833-.448.833-1s-.373-1-.833-1H11zm-1 8c4.067 0 7-2.933 7-7s-2.933-7-7-7-7 2.933-7 7 2.933 7 7 7z">
@@ -1712,6 +1848,8 @@
     </script>
     <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/lib/BsMultiSelect/js/BsMultiSelect.min.js"></script>
+    <script src="assets/lib/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/lib/jqTreeJs/js/tree.jquery.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
