@@ -146,31 +146,19 @@ $(document).ready(function () {
 
 
 /*=======================================================
-                    jq-Tree.js
+        bank-statement page dropdown sub-menu
 =======================================================*/
-// const data = [{
-//         label: "node 1",
-//         id: 1,
-//         children: [{
-//                 label: "node 1-1",
-//                 id: 2
-//             }, {
-//                 label: "node 1-2",
-//                 id: 3
-//             }
-//             // ...
-//         ]
-//     },
-//     {
-//         label: "node2",
-//         id: 4,
-//         children: [{
-//             label: "node 2-1",
-//             id: 5
-//         }]
-//     }
-// ];
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
-// $("#myTree1").tree({
-//     data: data
-// });
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}

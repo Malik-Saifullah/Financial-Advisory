@@ -1460,7 +1460,8 @@ img {
 #main #Transaction #income-expense-btn-toggle table tbody tr td.full-width-second-half {
   padding-right: 10px;
 }
-#main #Transaction #new-account .modal-dialog .modal-content .modal-body form .form-group input, #main #Transaction #new-account .modal-dialog .modal-content .modal-body form .form-group textarea {
+#main #Transaction #new-account .modal-dialog .modal-content .modal-body form .form-group input,
+#main #Transaction #new-account .modal-dialog .modal-content .modal-body form .form-group textarea {
   width: 300px;
   float: right;
 }
@@ -1741,6 +1742,69 @@ img {
   background-size: 11px 11px;
   padding-right: 15px;
   display: inline-block;
+}
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .nav-item-container .nav-tabs {
+  border-bottom: none;
+}
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .nav-item-container .nav-tabs .nav-link {
+  border-bottom: 1px solid #dee2e6;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .nav-item-container .nav-tabs .nav-link.active {
+  border-top: 3px solid blue;
+  border-bottom: none;
+}
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-asset .collapsible,
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-liability-credit .collapsible {
+  background: transparent;
+  color: #303a45;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-asset .collapsible i,
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-liability-credit .collapsible i {
+  padding-right: 5px;
+}
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-asset .content,
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-liability-credit .content {
+  color: #303a45;
+  padding: 0 10px;
+  display: none;
+  overflow: hidden;
+}
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-asset .content ul,
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-liability-credit .content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-asset .content ul li,
+#main #new-BankStatement .modal-dialog .modal-content .modal-body .nav-tab-box .element-container .p-3 .tab-content #v-pills-liability-credit .content ul li {
+  cursor: pointer;
+}
+#main #Sub-Modal-new-BankStatement .modal-dialog .modal-content .modal-body form .form-group .form-check {
+  padding-left: 0;
+}
+#main #Sub-Modal-new-BankStatement .modal-dialog .modal-content .modal-body form .form-group .form-check .form-check-label {
+  display: block;
+}
+#main #Sub-Modal-new-BankStatement .modal-dialog .modal-content .modal-body form .form-group .form-check .form-check-input {
+  margin-left: 0;
+}
+#main #Sub-Modal-new-BankStatement .modal-dialog .modal-content .modal-body form .form-group .form-check .form-check-sub-label {
+  margin-top: 20px;
+  font-size: 12px;
+}
+#main #Sub-Modal-new-BankStatement .modal-dialog .modal-content .modal-body form label,
+#main #Sub-Modal-new-BankStatement .modal-dialog .modal-content .modal-body form input,
+#main #Sub-Modal-new-BankStatement .modal-dialog .modal-content .modal-body form select,
+#main #Sub-Modal-new-BankStatement .modal-dialog .modal-content .modal-body form p {
+  color: #303a45;
 }
 #main #Charts {
   /* chart tab navigation */
