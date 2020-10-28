@@ -972,6 +972,47 @@ img {
                             font-weight: 700;
                             padding: 10px 20px;
                             background: $headerColor;
+                            .transactions-list-header-search-wrapper{
+                                display: none;
+                                .transactions-list-header-search-inner-wrapper{
+                                    display: flex;
+                                    align-items: center;
+                                    .transactions-input-search-box{
+                                        width: 100%;
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+                                        input{
+                                            width: 100%;
+                                            padding: 5px 10px;
+                                            border: none;
+                                        }
+                                        i{
+                                            font-size: 14px;
+                                            position: absolute;
+                                            right: 10px;
+                                            color: $dateColor;
+                                            margin: 0;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                    .transaction-search-button{
+                                        padding: 5px 10px;
+                                        background-color: $textColor;
+                                        margin: 0;
+                                        border: none;
+                                        i{
+                                            font-size: 15px;
+                                            color: black;
+                                            padding: 5px 5px 4px 4px;
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .search-btn-box{
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -1556,6 +1597,35 @@ img {
                                 label {
                                     color: $dateColor;
                                     padding-right: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #what-new-btn{
+        .modal-dialog{
+            .modal-content{
+                .modal-body{
+                    .announcement-items{
+                        .announcement-item{
+                            display: flex;
+                            align-items: center;
+                            .announcement-item-icon{
+                                width: 70px;
+                                min-width: 70px;
+                                margin-right: 15px;
+                            }
+                            .announcement-item-content{
+                                color: $dateColor;
+                                .announcement-item-date{
+                                    float: right;
+                                    .announcement-date{
+                                        color: $badgesColor;
+                                    }
                                 }
                             }
                         }

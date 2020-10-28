@@ -158,3 +158,19 @@ for (i = 0; i < coll.length; i++) {
         }
     });
 }
+
+
+
+
+
+/*=======================================================
+            transaction input search field
+=======================================================*/
+$(".search-btn-box").click(function(){
+    $(".transactions-list-header-search-wrapper").toggle();
+    $(".search-btn-box").toggle();
+});
+$("#input-field-close-btn").click(function(){
+    $(".transactions-list-header-search-wrapper").toggle();
+    $(".search-btn-box").toggle();
+});
