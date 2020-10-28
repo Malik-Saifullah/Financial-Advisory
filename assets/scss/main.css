@@ -1718,6 +1718,58 @@ img {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .dropdown .bootstrap-select {
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .dropdown .bootstrap-select button {
+  margin: 0;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .dropdown .bootstrap-select button::after {
+  position: absolute;
+  right: 5px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .dropdown .bootstrap-select .dropdown-menu .bs-searchbox {
+  margin-bottom: 10px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .dropdown .bootstrap-select .dropdown-menu .bs-searchbox input {
+  border: 1px solid #303a45;
+  color: #303a45;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .input-number-left {
+  width: 50%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #dadfe9;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .input-number-left input {
+  text-align: right;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .input-number-right {
+  float: right;
+  width: 50%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #dadfe9;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .input-number-right input {
+  text-align: right;
+}
 #main #Transaction #journal-transaction-btn-toggle table tbody tr td .dropdown-links button {
   text-decoration: underline;
   margin-top: 5px;
@@ -1772,6 +1824,44 @@ img {
   margin-bottom: 5px;
 }
 #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .content-box p, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .content-box p {
+  text-align: center;
+  margin: 0;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half {
+  width: 50%;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #303a45;
+  padding-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box button, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box button {
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: 1px solid #dadfe9;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box button:hover, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box button:hover {
+  background-color: #303a45;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box p, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box p {
+  padding-top: 5px;
+  font-size: 13px;
   text-align: center;
   margin: 0;
 }
