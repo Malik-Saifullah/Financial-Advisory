@@ -187,11 +187,14 @@ for (i = 0; i < coll.length; i++) {
 /*=======================================================
             transaction input search field
 =======================================================*/
-$(".search-btn-box").click(function(){
+$(".search-btn-box").click(function () {
     $(".transactions-list-header-search-wrapper").toggle();
     $(".search-btn-box").toggle();
+    $("#income-expense-btn-toggle").hide();
+    $("#journal-transaction-btn-toggle").hide();
+    $("#income-expense-toggle").removeClass("income-expense-toggle");
 });
-$("#input-field-close-btn").click(function(){
+$("#input-field-close-btn").click(function () {
     $(".transactions-list-header-search-wrapper").toggle();
     $(".search-btn-box").toggle();
 });
@@ -207,6 +210,6 @@ $(function () {
 
 
 
-$("#add-one-now-btn").click(function(){
+$("#add-one-now-btn").click(function () {
     $('.add-one-now-btn-tooltip').toggle();
 });

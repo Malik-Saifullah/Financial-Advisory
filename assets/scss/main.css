@@ -1823,14 +1823,17 @@ img {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .content-box p, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .content-box p {
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .content-box p,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .content-box p {
   text-align: center;
   margin: 0;
 }
-#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half {
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half {
   width: 50%;
 }
-#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box {
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1846,7 +1849,8 @@ img {
   margin-left: 10px;
   margin-right: 10px;
 }
-#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box button, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box button {
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box button,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box button {
   margin: 0 auto;
   padding: 10px 20px;
   border: 1px solid #dadfe9;
@@ -1856,10 +1860,12 @@ img {
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
 }
-#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box button:hover, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box button:hover {
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box button:hover,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box button:hover {
   background-color: #303a45;
 }
-#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box p, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box p {
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .add-more-field-btn-box p,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .add-more-field-btn-box p {
   padding-top: 5px;
   font-size: 13px;
   text-align: center;
