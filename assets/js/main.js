@@ -133,14 +133,10 @@ $(document).ready(function () {
 /*=======================================================
                     custom select
 =======================================================*/
-// $(document).ready(function () {
-//     $(".selected-option-content").click(function () {
-//         $(".options-box").show();
-//     });
-//     $(".selected-option-content").click(function () {
-//         $(".options-box").hide();
-//     });
-// });
+$(".selected-option-text").click(function (d) {
+    d.preventDefault();
+    $("#options-box").toggleClass("filter-box");
+});
 
 
 

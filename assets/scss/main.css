@@ -844,12 +844,12 @@ img {
 #main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .selected-option-content .selected-option-text span i {
   padding-left: 15px;
 }
-#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .select-option-title {
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown #options-box .select-option-title {
   font-size: 16px;
   font-weight: 700;
   margin: 0;
 }
-#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .select-option-text {
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown #options-box .select-option-text {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -862,13 +862,13 @@ img {
           justify-content: space-between;
   margin: 0;
 }
-#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .select-option-text span {
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown #options-box .select-option-text span {
   font-size: 14px;
   font-weight: 400;
   padding-top: 5px;
   padding-bottom: 5px;
 }
-#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .btn-container-of-select {
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown #options-box .btn-container-of-select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -879,8 +879,11 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .options-box .btn-container-of-select button {
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown #options-box .btn-container-of-select button {
   margin: 0;
+}
+#main #Transaction .table_container .table_container_btn_box .table_container_inner_btn_box .dropdown .filter-box {
+  display: none;
 }
 #main #Transaction .table_container table thead tr td:nth-last-child(2),
 #main #Transaction .table_container table thead tr td:nth-last-child(3) {
