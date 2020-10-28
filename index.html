@@ -68,21 +68,21 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link active" onclick="openCity(event, 'Dashboard')" id="defaultOpen">
+                            <a href="#Dashboard" class="nav-link active" onclick="openCity(event, 'Dashboard')" id="defaultOpen">
                                 <img src="./assets/images/Icons/briefcase.png" alt="">
                                 <span class="link-text">Dashboard</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link" onclick="openCity(event, 'Sales')">
+                            <a href="#Sales" class="nav-link" onclick="openCity(event, 'Sales')">
                                 <img src="./assets/images/Icons/Sales-icon.png" alt="">
                                 <span class="link-text">Sales</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link" onclick="openCity(event, 'Purchases')">
+                            <a href="#Purchases" class="nav-link" onclick="openCity(event, 'Purchases')">
                                 <img src="./assets/images/Icons/Purchase-icon.png" alt="">
                                 <span class="link-text">Purchases</span>
                             </a>
@@ -90,7 +90,7 @@
 
                         <!-- dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-btn" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-btn" href="#Accounting" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="./assets/images/Icons/Accounting-icon.png" alt="">
                                 <span class="link-text">Accounting</span>
@@ -99,15 +99,15 @@
 
                             <!-- dropdown element container -->
                             <div class="dropdown-container" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="#" onclick="openCity(event, 'Transaction')">
+                                <a class="nav-link" href="#Transaction" onclick="openCity(event, 'Transaction')">
                                     <img src="./assets/images/Icons/Transaction-icon.png" alt="">
                                     <span class="link-text">Transaction</span>
                                 </a>
-                                <a class="nav-link" href="#" onclick="openCity(event, 'Reconcilation')">
+                                <a class="nav-link" href="#Reconcilation" onclick="openCity(event, 'Reconcilation')">
                                     <img src="./assets/images/Icons/Reconcilation-icon.png" alt="">
                                     <span class="link-text">Reconcilation</span>
                                 </a>
-                                <a class="nav-link" href="#" onclick="openCity(event, 'Charts')">
+                                <a class="nav-link" href="#charts-of-acc" onclick="openCity(event, 'Charts')">
                                     <img src="./assets/images/Icons/charts-of-acc-icon.png" alt="">
                                     <span class="link-text">Charts of Account</span>
                                 </a>
@@ -115,7 +115,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link" onclick="openCity(event, 'Reports')">
+                            <a href="#Reports" class="nav-link" onclick="openCity(event, 'Reports')">
                                 <img src="./assets/images/Icons/Reports-icon.png" style="width: 27px; margin: 0 21px;"
                                     alt="">
                                 <span class="link-text">Reports</span>
@@ -123,7 +123,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link" onclick="openCity(event, 'Settings')">
+                            <a href="#Settings" class="nav-link" onclick="openCity(event, 'Settings')">
                                 <img src="./assets/images/Icons/settings-solid.png" style="width: 25px; margin: 0 23px;"
                                     alt="">
                                 <span class="link-text">Settings</span>
@@ -243,7 +243,7 @@
                         <h1 class="all-transaction-title">Track and organize all your transactions in one place.</h1>
                         <p class="all-transaction-subtitle">Choose an option to get started:</p>
                         <div class="all-transaction-card-box">
-                            <a href="#bank-statement" class="card">
+                            <a href="#BankStatement" class="card" onclick="openCity(event, 'BankStatement')">
                                 <svg viewBox="0 0 80 80" id="decor--cloud-upload" xmlns="http://www.w3.org/2000/svg">
                                     <g fill="none" fill-rule="nonzero">
                                         <circle cx="40" cy="40" r="38" fill="#5a6988"></circle>
@@ -258,7 +258,7 @@
                                 <h3 class="icon-title">Upload a bank statement</h3>
                                 <p class="icon-info">Import transactions from a CSV statement.</p>
                             </a>
-                            <a href="" class="card">
+                            <a href="#Transaction" class="card" onclick="openCity(event, 'Transaction')">
                                 <svg viewBox="0 0 80 80" id="decor--document-add" xmlns="http://www.w3.org/2000/svg">
                                     <g fill="none" fill-rule="evenodd">
                                         <circle cx="40" cy="40" r="38" fill="#5a6988" fill-rule="nonzero"></circle>
@@ -276,7 +276,7 @@
                                 <h3 class="icon-title">Add manual transactions</h3>
                                 <p class="icon-info">Enter transaction amounts as income or expense.</p>
                             </a>
-                            <a href="" class="card">
+                            <a href="https://www.google.com" class="card" target="_blank">
                                 <svg viewBox="0 0 80 80" id="decor--document-default"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g fill="none" fill-rule="nonzero">

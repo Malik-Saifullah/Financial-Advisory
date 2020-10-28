@@ -860,7 +860,6 @@ img {
                 -ms-border-radius: 10px;
                 -o-border-radius: 10px;
                 background-color: $bodyColor1;
-                padding: 10px 20px;
 
                 .table_container_inner_btn_box {
                     .dropdown {
@@ -871,6 +870,7 @@ img {
                                 justify-content: space-between;
                                 margin: 0;
                                 cursor: pointer;
+                                padding: 10px 20px;
 
                                 span {
                                     display: flex;
@@ -892,6 +892,7 @@ img {
                                 font-size: 16px;
                                 font-weight: 700;
                                 margin: 0;
+                                padding: 5px 20px;
                             }
 
                             .select-option-text {
@@ -900,6 +901,10 @@ img {
                                 align-items: center;
                                 justify-content: space-between;
                                 margin: 0;
+                                padding: 5px 20px;
+                                &:hover{
+                                    background: $bodyColor2;
+                                }
 
                                 span {
                                     font-size: 14px;
@@ -913,9 +918,19 @@ img {
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
-
-                                button {
+                                padding: 5px 10px;
+                                border-top: 1px solid $textColor;
+                                button{
                                     margin: 0;
+                                    border-radius: 0;
+                                    -webkit-border-radius: 0;
+                                    -moz-border-radius: 0;
+                                    -ms-border-radius: 0;
+                                    -o-border-radius: 0;
+                                }
+                                button.btn-primary{
+                                    border-left: 1px solid $textColor;
+                                    padding-left: 20px;
                                 }
                             }
                         }
