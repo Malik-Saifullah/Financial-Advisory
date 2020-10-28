@@ -312,7 +312,7 @@
 
                                 <!-- dropdown element -->
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item showSection" style="cursor: pointer;">Add journal
+                                    <a class="dropdown-item showJournalSection" style="cursor: pointer;">Add journal
                                         transaction</a>
                                     <a class="dropdown-item" href="#BankStatement"
                                         onclick="openCity(event, 'BankStatement')">Upload a bank statement</a>
@@ -987,16 +987,16 @@
                                             <td class="full-width-first-half">
                                                 <div class="account-dropdown">
                                                     <label for="account">Account</label>
-                                                    <select class="" id="" name="account" tabindex="3">
+                                                    <select class="selectpicker" id="" name="account" tabindex="3" data-live-search="true">
                                                         <optgroup label="Cash and Bank">
                                                             <option value="" selected="selected">Cash on Hand</option>
                                                         </optgroup>
                                                         <optgroup label="Business Owner Contribution and Drawing">
                                                             <option value="">Owner Investment/Drawing</option>
                                                         </optgroup>
-                                                        <option value="">
+                                                        <option value="" data-icon="fas fa-plus-circle" type="button" class="btn" data-toggle="modal" data-target="#new-account">
                                                             <button>
-                                                                <i>icon</i> Add a new account
+                                                                Add a new account
                                                             </button>
                                                         </option>
                                                     </select>
@@ -1013,7 +1013,7 @@
                                             <td class="full-width-first-half">
                                                 <div class="deposit-withdrawal">
                                                     <label for="transaction-type">Deposit or withdrawal</label>
-                                                    <select class="" id="" name="transaction-type" tabindex="2">
+                                                    <select class="selectpicker" id="" name="transaction-type" tabindex="2">
                                                         <option value="" selected="selected">Deposit</option>
                                                         <option value="">Withdrawal</option>
                                                     </select>
@@ -1035,15 +1035,20 @@
                                             <td colspan="2" class="full-width">
                                                 <div class="dropdown">
                                                     <label for="category">Category</label>
-                                                    <select class="" id="" name="category" tabindex="2">
+                                                    <select class="selectpicker" id="" name="category" tabindex="2" data-live-search="true">
                                                         <option value="" selected="selected">Uncategorized Income
                                                         </option>
                                                         <option value="">Withdrawal</option>
                                                     </select>
                                                 </div>
                                                 <div class="dropdown-links">
-                                                    <button>Include sales tax</button>
-                                                    <button>Add customer</button>
+                                                    <button type="button" id="add-one-now-btn">Include sales tax</button>
+                                                    <button type="button">Add customer</button>
+                                                    <div class="add-one-now-btn-tooltip" data-content>
+                                                        <p class="tooltip-title">Include sales tax</p>
+                                                        <p class="tooltip-text">You have no sales taxes yet.</p>
+                                                        <a href="#" target="_blank" rel="noreferrer"><i class="fas fa-plus-circle"></i> Add one now</a>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -1101,6 +1106,147 @@
                                 </table>
                             </div>
                             <!-- end of add income/expense -->
+                            
+                            <!-- add journal transaction -->
+                            <div id="journal-transaction-btn-toggle" class="" style="max-height: 75vh; overflow-y: scroll;">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>Edit transaction details</td>
+                                            <td>
+                                                <i id="btn-journal-close" class="fas fa-times"></i>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="write-discription">
+                                                    <label for="description">Description</label>
+                                                    <input name="description" type="text" value="Write a Description"
+                                                        placeholder="Write a Description">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="full-width-first-half">
+                                                <div class="date-picker">
+                                                    <label for="date">Date</label>
+                                                    <input type="date" name="date" id="">
+                                                </div>
+                                            </td>
+                                            <td class="full-width-second-half">
+                                                <div class="total-amount">
+                                                    <div class="amount">Total amount</div>
+                                                    <div class="total-value">0.00</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="line-break"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="full-width-first-half">
+                                                <div class="content-box">
+                                                    <p>Debits</p>
+                                                </div>
+                                            </td>
+                                            <td class="full-width-second-half">
+                                                <div class="content-box">
+                                                    <p>Credits</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="dropdown">
+                                                    <select class="selectpicker" id="" name="category" tabindex="2" data-live-search="true">
+                                                        <option value="" selected="selected">Uncategorized Income
+                                                        </option>
+                                                        <option value="">Withdrawal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-number-left">
+                                                    <input type="number" name="amount" min="0" value="0.00" id="">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="dropdown">
+                                                    <select class="selectpicker" id="" name="category" tabindex="2" data-live-search="true">
+                                                        <option value="" selected="selected">Uncategorized Income
+                                                        </option>
+                                                        <option value="">Withdrawal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-number-right">
+                                                    <input type="number" name="amount" min="0" value="0.00" id="">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="full-width-first-half">
+                                                <button>Add Debit</button>
+                                                <p>Total Debit is 
+                                                    <span>
+                                                        <strong>0.00</strong>
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td class="full-width-second-half">
+                                                <button>Add Cretit</button>
+                                                <p>Total Credit is 
+                                                    <span>
+                                                        <strong>0.00</strong>
+                                                    </span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="notes">
+                                                    <label for="textarea">Notes</label>
+                                                    <textarea name="textarea" class="" id="" rows="3"></textarea>
+                                                </div>
+                                                <div class="update-btn">
+                                                    <p>Transaction last modified on <span>October 17th, 2020</span></p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="line-break"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="full-width">
+                                                <div class="btn-controlls">
+                                                    <div id="btn-delete" class="btn btn-delete" type="button">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </div>
+                                                    <div class="btn btn-copy" type="button" data-toggle="tooltip"
+                                                        data-placement="top"
+                                                        title="Save your current changes before you duplicate this transaction.">
+                                                        <i class="far fa-copy"></i>
+                                                    </div>
+                                                    <div class="btn btn-review" type="button" data-toggle="tooltip"
+                                                        data-placement="top"
+                                                        title="Categorize first to mark as reviewed">
+                                                        <span><i class="fas fa-check"></i> Mark as reviewed</span>
+                                                    </div>
+                                                    <div class="btn btn-save" type="button">
+                                                        <span>Save</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end of add journal transaction -->
                         </div>
                     </div>
 

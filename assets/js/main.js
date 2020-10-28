@@ -87,8 +87,29 @@ $(document).ready(function () {
         $("#income-expense-toggle").removeClass("income-expense-toggle");
     });
     $(".showSection").click(function () {
+        $("#journal-transaction-btn-toggle").hide();
         $("#income-expense-btn-toggle").show();
         $("#income-expense-toggle").addClass("income-expense-toggle");
+    });
+});
+
+$(document).ready(function () {
+    $("#btn-journal-close").click(function () {
+        $("#journal-transaction-btn-toggle").hide();
+        $("#income-expense-toggle").removeClass("income-expense-toggle");
+    });
+    $(".showJournalSection").click(function () {
+        $("#income-expense-btn-toggle").hide();
+        $("#journal-transaction-btn-toggle").show();
+        $("#income-expense-toggle").addClass("income-expense-toggle");
+    });
+});
+
+$(document).ready(function () {
+    $(".btn-delete").click(function () {
+        $("#journal-transaction-btn-toggle").hide();
+        $("#income-expense-btn-toggle").hide();
+        $("#income-expense-toggle").removeClass("income-expense-toggle");
     });
 });
 
@@ -173,4 +194,19 @@ $(".search-btn-box").click(function(){
 $("#input-field-close-btn").click(function(){
     $(".transactions-list-header-search-wrapper").toggle();
     $(".search-btn-box").toggle();
+});
+
+
+
+
+
+$(function () {
+    $('[data-toggle="popover"]').popover();
+});
+
+
+
+
+$("#add-one-now-btn").click(function(){
+    $('.add-one-now-btn-tooltip').toggle();
 });

@@ -1299,7 +1299,7 @@ img {
 }
 #main #Transaction .income-expense-toggle {
   display: grid;
-  grid-template-columns: 1fr 440px;
+  grid-template-columns: 1fr 445px;
   -webkit-column-gap: 5px;
           column-gap: 5px;
 }
@@ -1381,6 +1381,7 @@ img {
 #main #Transaction #income-expense-btn-toggle table tbody tr td .write-discription,
 #main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown,
 #main #Transaction #income-expense-btn-toggle table tbody tr td .notes {
+  width: 100%;
   padding: 5px 10px;
   border: 1px solid #dadfe9;
   border-radius: 5px;
@@ -1389,11 +1390,81 @@ img {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+#main #Transaction #income-expense-btn-toggle table tbody tr td .write-discription .bootstrap-select,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown .bootstrap-select,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .notes .bootstrap-select {
+  border: none;
+  padding: 0;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .write-discription .bootstrap-select button,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown .bootstrap-select button,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .notes .bootstrap-select button {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .write-discription .bootstrap-select button::after,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown .bootstrap-select button::after,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .notes .bootstrap-select button::after {
+  position: absolute;
+  right: 5px;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .write-discription .bootstrap-select .dropdown-menu .bs-searchbox,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown .bootstrap-select .dropdown-menu .bs-searchbox,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .notes .bootstrap-select .dropdown-menu .bs-searchbox {
+  margin-bottom: 10px;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .write-discription .bootstrap-select .dropdown-menu .bs-searchbox input,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown .bootstrap-select .dropdown-menu .bs-searchbox input,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .notes .bootstrap-select .dropdown-menu .bs-searchbox input {
+  border: 1px solid #303a45;
+  color: #303a45;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown-links {
+  position: relative;
+}
 #main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown-links button {
   text-decoration: underline;
   margin-top: 5px;
   margin-right: 0;
   margin-left: 10px;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown-links .add-one-now-btn-tooltip {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #dadfe9;
+  padding: 5px 10px;
+  z-index: 9;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown-links .add-one-now-btn-tooltip::before {
+  content: "";
+  position: absolute;
+  right: 50px;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6.5px 10px 6.5px;
+  border-color: transparent transparent #dadfe9 transparent;
+  line-height: 0px;
+  _border-color: #000000 #000000 #dadfe9 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown-links .add-one-now-btn-tooltip .tooltip-title {
+  font-weight: 700;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown-links .add-one-now-btn-tooltip p {
+  color: #303a45;
+  margin: 0;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .dropdown-links .add-one-now-btn-tooltip a {
+  color: #303a45;
+  text-align: center;
 }
 #main #Transaction #income-expense-btn-toggle table tbody tr td .account-dropdown,
 #main #Transaction #income-expense-btn-toggle table tbody tr td .deposit-withdrawal {
@@ -1406,6 +1477,38 @@ img {
   -moz-border-radius: 5px 0 0 5px;
   -ms-border-radius: 5px 0 0 5px;
   -o-border-radius: 5px 0 0 5px;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .account-dropdown .bootstrap-select,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .deposit-withdrawal .bootstrap-select {
+  border: none;
+  padding: 0;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .account-dropdown .bootstrap-select button,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .deposit-withdrawal .bootstrap-select button {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .account-dropdown .bootstrap-select button::after,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .deposit-withdrawal .bootstrap-select button::after {
+  position: absolute;
+  right: 5px;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .account-dropdown .bootstrap-select .dropdown-menu .bs-searchbox,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .deposit-withdrawal .bootstrap-select .dropdown-menu .bs-searchbox {
+  margin-bottom: 10px;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .account-dropdown .bootstrap-select .dropdown-menu .bs-searchbox input,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .deposit-withdrawal .bootstrap-select .dropdown-menu .bs-searchbox input {
+  border: 1px solid #303a45;
+  color: #303a45;
+}
+#main #Transaction #income-expense-btn-toggle table tbody tr td .account-dropdown .bootstrap-select .dropdown-menu .bs-searchbox .inner .dropdown-menu li:last-child,
+#main #Transaction #income-expense-btn-toggle table tbody tr td .deposit-withdrawal .bootstrap-select .dropdown-menu .bs-searchbox .inner .dropdown-menu li:last-child {
+  text-align: center;
 }
 #main #Transaction #income-expense-btn-toggle table tbody tr td .date-picker,
 #main #Transaction #income-expense-btn-toggle table tbody tr td .total-amount {
@@ -1527,6 +1630,204 @@ img {
   padding-left: 10px;
 }
 #main #Transaction #income-expense-btn-toggle table tbody tr td.full-width-second-half {
+  padding-right: 10px;
+}
+#main #Transaction #journal-transaction-btn-toggle {
+  display: none;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+#main #Transaction #journal-transaction-btn-toggle::-webkit-scrollbar {
+  width: 10px;
+}
+#main #Transaction #journal-transaction-btn-toggle::-webkit-scrollbar-track {
+  background: #657699;
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#main #Transaction #journal-transaction-btn-toggle::-webkit-scrollbar-thumb {
+  background: #a2b5d6;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#main #Transaction #journal-transaction-btn-toggle::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+#main #Transaction #journal-transaction-btn-toggle table thead tr td {
+  text-align: left;
+}
+#main #Transaction #journal-transaction-btn-toggle table thead tr td i {
+  font-size: 20px;
+  line-height: 1.3;
+  float: right;
+  cursor: pointer;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody {
+  background-color: #5a6988;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td {
+  text-align: left;
+  padding: 10px 0 10px 0;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td label {
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 500;
+  display: block;
+  letter-spacing: 1px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td input,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td select,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td textarea {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  color: #dadfe9;
+  background-color: transparent;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td input option,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td input optgroup,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td select option,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td select optgroup,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td textarea option,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td textarea optgroup {
+  background-color: #5a6988;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .write-discription,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .dropdown,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .notes {
+  padding: 5px 10px;
+  border: 1px solid #dadfe9;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .dropdown-links button {
+  text-decoration: underline;
+  margin-top: 5px;
+  margin-right: 0;
+  margin-left: 10px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .account-dropdown,
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .deposit-withdrawal {
+  padding: 5px 10px;
+  border-left: 1px solid #dadfe9;
+  border-top: 1px solid #dadfe9;
+  border-bottom: 1px solid #dadfe9;
+  border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -ms-border-radius: 5px 0 0 5px;
+  -o-border-radius: 5px 0 0 5px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .date-picker {
+  padding: 5px 10px;
+  border: 1px solid #dadfe9;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .date-picker input[type=date] {
+  appearance: textfield !important;
+  -webkit-appearance: textfield !important;
+  -moz-appearance: textfield !important;
+  -ms-appearance: textfield !important;
+  -o-appearance: textfield !important;
+  text-align: right;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .total-amount {
+  float: right;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .total-amount .amount {
+  font-size: 12px;
+  text-align: right;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .total-amount .total-value {
+  font-size: 23px;
+  text-align: right;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td .line-break {
+  width: 100%;
+  height: 1px;
+  background-color: #303a45;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-first-half .content-box p, #main #Transaction #journal-transaction-btn-toggle table tbody tr .full-width-second-half .content-box p {
+  text-align: center;
+  margin: 0;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .update-btn p {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .btn-controlls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .btn-controlls .btn {
+  color: #dadfe9;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .btn-controlls .btn-delete {
+  border: 1px solid red;
+  background-color: red;
+  margin-right: 10px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .btn-controlls .btn-copy {
+  border: 1px solid #dadfe9;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .btn-controlls .btn-review {
+  margin-left: auto;
+  border: 1px solid #dadfe9;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .btn-controlls .btn-review i {
+  margin-right: 5px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr .btn-controlls .btn-save {
+  margin-left: 10px;
+  border: 1px solid #303a45;
+  background-color: #303a45;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td.full-width {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td.full-width-first-half {
+  padding-left: 10px;
+}
+#main #Transaction #journal-transaction-btn-toggle table tbody tr td.full-width-second-half {
   padding-right: 10px;
 }
 #main #Transaction #new-account .modal-dialog .modal-content .modal-body form .form-group input,
